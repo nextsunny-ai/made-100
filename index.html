@@ -3,7 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>MADE 100 — 방송 프로그램 기획서 V1.1</title>
+<title>MADE 100 — 방송 프로그램 기획서 V2</title>
+<meta name="description" content="전 세계가 만든 100명의 AI 아이돌. 시청자가 직접 9명의 데뷔조 THE NINE을 데뷔시키는 세계 최초 글로벌 AI 아이돌 데뷔 오디션 — (주)써니엔터테인먼트 × 스타로드이엔엠." />
+<meta name="theme-color" content="#0D0D15" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MADE 100 — 글로벌 AI 아이돌 데뷔 오디션" />
+<meta property="og:description" content="전 세계가 만든 100명의 AI 아이돌. 시청자가 직접 9명을 데뷔시킨다. 방송 프로그램 기획서 V2." />
+<meta property="og:image" content="https://nextsunny-ai.github.io/made-100/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://nextsunny-ai.github.io/made-100/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="MADE 100 — 글로벌 AI 아이돌 데뷔 오디션" />
+<meta name="twitter:description" content="전 세계가 만든 100명의 AI 아이돌. 시청자가 직접 9명을 데뷔시킨다." />
+<meta name="twitter:image" content="https://nextsunny-ai.github.io/made-100/og.png" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='11' fill='%2315152A'/%3E%3Cg fill='%23E6B84A'%3E%3Ccircle cx='16' cy='16' r='3'/%3E%3Ccircle cx='24' cy='16' r='3'/%3E%3Ccircle cx='32' cy='16' r='3'/%3E%3Ccircle cx='16' cy='24' r='3'/%3E%3Ccircle cx='24' cy='24' r='3'/%3E%3Ccircle cx='32' cy='24' r='3'/%3E%3Ccircle cx='16' cy='32' r='3'/%3E%3Ccircle cx='24' cy='32' r='3'/%3E%3Ccircle cx='32' cy='32' r='3'/%3E%3C/g%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -32,16 +46,36 @@
   .mono { font-family: "JetBrains Mono", monospace; letter-spacing: 0.10em; text-transform: uppercase; font-size: 0.72rem; color: var(--fg-muted); }
   .display { font-family: "Space Grotesk", "Pretendard", sans-serif; }
   .wrap { max-width: 1080px; margin: 0 auto; padding: 0 var(--s6); }
+  @media (max-width: 600px) { .wrap { padding: 0 var(--s3); } }
   section { padding: var(--s12) 0; border-bottom: 1px solid var(--line); }
   section:last-of-type { border-bottom: none; }
-  .hero { background: linear-gradient(180deg, #0D0D15 0%, #15152A 100%); color: var(--bg-primary); padding: var(--s12) 0 var(--s8); }
+
+  /* ---- HERO ---- */
+  .hero { position: relative; overflow: hidden; background: linear-gradient(180deg, #0D0D15 0%, #15152A 100%); color: var(--bg-primary); padding: var(--s8) 0 var(--s12); }
+  .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+  .hero .wrap { position: relative; z-index: 1; }
   .hero .mono { color: oklch(68% 0.04 255); }
   .hero h1 { font-family: "Space Grotesk", sans-serif; font-size: clamp(3rem, 1.6rem + 6vw, 7rem); font-weight: 700; line-height: 0.95; letter-spacing: -0.03em; margin: var(--s3) 0 var(--s2); }
   .hero .tagline { font-size: clamp(1.15rem, 0.9rem + 0.7vw, 1.6rem); color: oklch(83% 0.03 255); font-weight: 500; letter-spacing: -0.01em; }
   .hero .sub { margin-top: var(--s3); max-width: 54ch; color: oklch(72% 0.02 255); font-size: 1.02rem; }
   .hero-meta { display: flex; gap: var(--s1); flex-wrap: wrap; margin-top: var(--s6); }
   .hero-meta .badge { font-family: "JetBrains Mono", monospace; font-size: 0.7rem; letter-spacing: 0.05em; padding: 7px 13px; border: 1px solid oklch(60% 0.04 255 / 0.45); border-radius: var(--radius-pill); color: oklch(85% 0.03 255); }
-  .sec-head { display: flex; align-items: baseline; gap: var(--s2); margin-bottom: var(--s6); }
+
+  /* ---- BRAND ---- */
+  .brand { display: flex; align-items: center; gap: 13px; margin-bottom: var(--s4); }
+  .brand .logomark { width: 48px; height: 48px; flex: none; }
+  .brand .brand-tx { font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: 0.04em; color: oklch(88% 0.025 255); }
+  .brand .brand-tx small { display: block; font-family: "JetBrains Mono", monospace; font-size: 0.6rem; letter-spacing: 0.16em; color: oklch(58% 0.045 255); text-transform: uppercase; margin-top: 3px; }
+
+  /* ---- KEY VISUAL ---- */
+  .kv { margin-top: var(--s8); }
+  .kv svg { width: 100%; height: auto; display: block; }
+  .kv-cap { margin-top: var(--s3); font-family: "JetBrains Mono", monospace; font-size: 0.72rem; letter-spacing: 0.08em; color: oklch(64% 0.045 255); text-transform: uppercase; text-align: center; }
+
+  /* ---- SECTION HEADS ---- */
+  .sec-head { display: flex; align-items: center; gap: var(--s2); margin-bottom: var(--s6); }
+  .sec-icon { display: inline-flex; padding: 8px; background: var(--accent-soft); border-radius: var(--radius-md); flex: none; }
+  .sec-icon svg { display: block; width: 22px; height: 22px; stroke: var(--accent); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
   .sec-num { font-family: "JetBrains Mono", monospace; font-size: 0.82rem; color: var(--accent); font-weight: 500; }
   h2.display { font-size: clamp(1.7rem, 1.2rem + 1.7vw, 2.7rem); font-weight: 600; line-height: 1.08; letter-spacing: -0.02em; }
   h3 { font-family: "Space Grotesk", "Pretendard", sans-serif; font-size: 1.22rem; font-weight: 600; letter-spacing: -0.01em; margin: var(--s4) 0 var(--s2); }
@@ -51,6 +85,12 @@
   .lead { font-size: 1.2rem; color: var(--fg-primary); font-weight: 500; max-width: 62ch; line-height: 1.5; }
   .callout { background: var(--accent-soft); border-left: 3px solid var(--accent); padding: var(--s3); border-radius: 0 var(--radius-md) var(--radius-md) 0; margin: var(--s3) 0; }
   .callout p { color: var(--accent-deep); font-weight: 500; margin: 0; }
+
+  /* ---- FIGURE (SVG diagrams) ---- */
+  .figure { margin: var(--s4) 0 var(--s3); }
+  .figure svg { width: 100%; height: auto; display: block; }
+  .figure figcaption { margin-top: var(--s2); font-size: 0.82rem; color: var(--fg-muted); text-align: center; }
+
   .grid { display: grid; gap: var(--s3); }
   .grid-2 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(3, 1fr); }
@@ -83,29 +123,67 @@
   .ep-tag.live { background: var(--accent); color: #fff; }
   .ep p { margin-bottom: var(--s1); font-size: 0.94rem; }
   .ep .hook { font-size: 0.88rem; color: var(--accent-deep); font-weight: 500; margin-top: var(--s1); }
-  footer { background: linear-gradient(180deg, #15152A 0%, #0D0D15 100%); color: oklch(76% 0.02 255); padding: var(--s8) 0; }
+  footer { position: relative; overflow: hidden; background: linear-gradient(180deg, #15152A 0%, #0D0D15 100%); color: oklch(76% 0.02 255); padding: var(--s12) 0 var(--s8); }
+  footer .wrap { position: relative; z-index: 1; }
   footer .mono { color: oklch(58% 0.04 255); }
   footer h2 { color: var(--bg-primary); }
   footer a { color: var(--accent-soft); }
   .pill-row { display: flex; gap: var(--s1); flex-wrap: wrap; margin: var(--s2) 0; }
   .pill { font-family: "JetBrains Mono", monospace; font-size: 0.68rem; letter-spacing: 0.04em; background: var(--bg-secondary); color: var(--fg-secondary); padding: 5px 11px; border-radius: var(--radius-pill); }
   .divider-label { font-family: "JetBrains Mono", monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-muted); margin: var(--s6) 0 var(--s2); padding-bottom: var(--s1); border-bottom: 1px solid var(--line); }
-  .funnel { display: flex; gap: var(--s1); flex-wrap: wrap; align-items: center; margin: var(--s3) 0; }
-  .funnel .stage { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--accent); }
-  .funnel .arrow { color: var(--fg-muted); }
-  .vs-box { display: grid; grid-template-columns: 1fr auto 1fr; gap: var(--s2); align-items: center; margin: var(--s3) 0; }
-  @media (max-width: 600px) { .vs-box { grid-template-columns: 1fr; } }
-  .vs-box .side { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius-md); padding: var(--s3); }
-  .vs-box .vs { font-family: "Space Grotesk", sans-serif; font-weight: 700; color: var(--accent); font-size: 1.3rem; text-align: center; }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 </style>
 </head>
 <body>
 
-<!-- HERO -->
+<!-- ============ HERO ============ -->
 <header class="hero">
+  <!-- 배경 — AI 시그널 도트 그리드 -->
+  <svg class="hero-bg" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <pattern id="heroDots" width="38" height="38" patternUnits="userSpaceOnUse">
+        <circle cx="19" cy="19" r="1.5" fill="#FFFFFF" fill-opacity="0.05" />
+      </pattern>
+      <radialGradient id="heroGlow" cx="78%" cy="22%" r="55%">
+        <stop offset="0%" stop-color="#3A4DC0" stop-opacity="0.34" />
+        <stop offset="100%" stop-color="#3A4DC0" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+    <rect width="1440" height="760" fill="url(#heroDots)" />
+    <rect width="1440" height="760" fill="url(#heroGlow)" />
+    <!-- 우상단 컨스텔레이션 악센트 -->
+    <g stroke="#E6B84A" stroke-opacity="0.4" stroke-width="1" fill="#E6B84A">
+      <polyline points="1180,90 1250,150 1310,110 1360,180 1290,230" fill="none" />
+      <circle cx="1180" cy="90" r="3" /><circle cx="1250" cy="150" r="3" />
+      <circle cx="1310" cy="110" r="3" /><circle cx="1360" cy="180" r="3" />
+      <circle cx="1290" cy="230" r="3" />
+    </g>
+  </svg>
+
   <div class="wrap">
-    <div class="mono">방송 프로그램 기획서 V1.1 &nbsp;/&nbsp; SUNNY ENT. × 스타로드이엔엠 &nbsp;/&nbsp; 2026</div>
+    <!-- 로고 / BI -->
+    <div class="brand">
+      <svg class="logomark" viewBox="0 0 48 48" aria-label="MADE 100 로고">
+        <rect width="48" height="48" rx="11" fill="#1C1C34" stroke="#33335A" stroke-width="1" />
+        <g fill="#5B6BD8" fill-opacity="0.55">
+          <circle cx="9" cy="9" r="1.7" /><circle cx="24" cy="7" r="1.7" /><circle cx="39" cy="9" r="1.7" />
+          <circle cx="7" cy="24" r="1.7" /><circle cx="41" cy="24" r="1.7" />
+          <circle cx="9" cy="39" r="1.7" /><circle cx="24" cy="41" r="1.7" /><circle cx="39" cy="39" r="1.7" />
+        </g>
+        <g stroke="#E6B84A" stroke-width="1" stroke-opacity="0.5">
+          <line x1="16" y1="16" x2="32" y2="16" /><line x1="16" y1="24" x2="32" y2="24" /><line x1="16" y1="32" x2="32" y2="32" />
+          <line x1="16" y1="16" x2="16" y2="32" /><line x1="24" y1="16" x2="24" y2="32" /><line x1="32" y1="16" x2="32" y2="32" />
+        </g>
+        <g fill="#E6B84A">
+          <circle cx="16" cy="16" r="2.9" /><circle cx="24" cy="16" r="2.9" /><circle cx="32" cy="16" r="2.9" />
+          <circle cx="16" cy="24" r="2.9" /><circle cx="24" cy="24" r="2.9" /><circle cx="32" cy="24" r="2.9" />
+          <circle cx="16" cy="32" r="2.9" /><circle cx="24" cy="32" r="2.9" /><circle cx="32" cy="32" r="2.9" />
+        </g>
+      </svg>
+      <div class="brand-tx">MADE 100<small>Global AI Idol Audition</small></div>
+    </div>
+
+    <div class="mono">방송 프로그램 기획서 V2 &nbsp;/&nbsp; SUNNY ENT. × 스타로드이엔엠 &nbsp;/&nbsp; 2026</div>
     <h1 class="display">MADE 100</h1>
     <div class="tagline">전 세계가 만든 100명의 AI 아이돌.<br/>시청자가 직접 9명을 데뷔시킨다.</div>
     <p class="sub">전 세계 AI 크리에이터가 만든 100명의 AI 아이돌이 경쟁한다. 유명 심사위원단과 현직 버추얼 가수가 심사하고, 시청자가 직접 9명의 데뷔조 'THE NINE'을 데뷔시킨다 — AI 아이돌이 직접 출연하는, 세계 최초 글로벌 데뷔 오디션.</p>
@@ -115,18 +193,69 @@
       <span class="badge">2026년 10월 방영</span>
       <span class="badge">데뷔조 — THE NINE</span>
     </div>
+
+    <!-- ===== 키 비주얼 — 100명에서 9명으로 ===== -->
+    <div class="kv">
+      <svg viewBox="0 0 1000 520" role="img" aria-label="100명의 AI 아이돌 중 9명이 데뷔조 THE NINE으로 선발되는 구조">
+        <defs>
+          <pattern id="pool100" width="44" height="44" patternUnits="userSpaceOnUse">
+            <circle cx="22" cy="22" r="3.4" fill="#3C3F66" />
+          </pattern>
+          <filter id="goldGlow" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="5.5" result="b" />
+            <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+          </filter>
+          <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#E6B84A" stop-opacity="0" />
+            <stop offset="100%" stop-color="#E6B84A" stop-opacity="0.9" />
+          </linearGradient>
+        </defs>
+
+        <!-- 좌측 라벨 -->
+        <text x="20" y="34" font-family="JetBrains Mono, monospace" font-size="15" letter-spacing="2" fill="#8A8FB5">100 AI IDOLS — 글로벌 공모</text>
+        <!-- 100인 풀 그리드 (10×10 = 100) -->
+        <rect x="20" y="50" width="440" height="440" fill="url(#pool100)" />
+
+        <!-- 선발된 9인 — 연결선 -->
+        <polyline points="86,424 174,380 130,336 218,292 174,248 306,204 262,160 350,116 306,72"
+          fill="none" stroke="#E6B84A" stroke-width="2" stroke-opacity="0.6" stroke-linejoin="round" />
+        <!-- 선발된 9인 — 골드 노드 -->
+        <g fill="#E6B84A" filter="url(#goldGlow)">
+          <circle cx="86" cy="424" r="8.5" /><circle cx="174" cy="380" r="8.5" />
+          <circle cx="130" cy="336" r="8.5" /><circle cx="218" cy="292" r="8.5" />
+          <circle cx="174" cy="248" r="8.5" /><circle cx="306" cy="204" r="8.5" />
+          <circle cx="262" cy="160" r="8.5" /><circle cx="350" cy="116" r="8.5" />
+          <circle cx="306" cy="72" r="8.5" />
+        </g>
+
+        <!-- 흐름 — 9명이 올라온다 -->
+        <path d="M 470 270 C 540 270, 560 270, 620 270" fill="none" stroke="url(#flowGrad)" stroke-width="3" />
+        <path d="M 612 262 L 626 270 L 612 278 Z" fill="#E6B84A" />
+
+        <!-- 우측 — THE NINE -->
+        <text x="780" y="100" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="15" letter-spacing="2" fill="#8A8FB5">데뷔조</text>
+        <text x="780" y="312" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="248" font-weight="700" fill="#E6B84A" letter-spacing="-8">9</text>
+        <text x="780" y="382" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="46" font-weight="700" fill="#F2F3F8" letter-spacing="3">THE NINE</text>
+        <text x="780" y="424" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="20" fill="#9FA3C4">남성 9인조 글로벌 보이그룹</text>
+        <text x="780" y="456" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="17" fill="#6E7299">9개국 · 1국 1명</text>
+      </svg>
+      <div class="kv-cap">100명의 AI 아이돌 — 단 9명이 데뷔조 THE NINE이 된다</div>
+    </div>
   </div>
 </header>
 
-<!-- TOC -->
+<!-- ============ TOC ============ -->
 <section>
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">00</span><h2 class="display">목차</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><line x1="4" y1="5" x2="16" y2="5"/><line x1="4" y1="10" x2="16" y2="10"/><line x1="4" y1="15" x2="11" y2="15"/></svg></span>
+      <span class="sec-num">00</span><h2 class="display">목차</h2>
+    </div>
     <nav class="toc">
       <a href="#s1"><span class="n">01</span><span>프로그램 개요</span></a>
       <a href="#s2"><span class="n">02</span><span>기획 의도</span></a>
       <a href="#s3"><span class="n">03</span><span>프로그램 컨셉</span></a>
-      <a href="#s4"><span class="n">04</span><span>핵심 재미 — 인간 vs AI</span></a>
+      <a href="#s4"><span class="n">04</span><span>핵심 재미 — 세 겹의 드라마</span></a>
       <a href="#s5"><span class="n">05</span><span>출연자 구성</span></a>
       <a href="#s6"><span class="n">06</span><span>공모·응모·상금</span></a>
       <a href="#s7"><span class="n">07</span><span>포맷·미션 구조</span></a>
@@ -148,7 +277,10 @@
 <!-- 01 -->
 <section id="s1">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">01</span><h2 class="display">프로그램 개요</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="4" y="3" width="12" height="14" rx="1.5"/><line x1="7" y1="7" x2="13" y2="7"/><line x1="7" y1="10" x2="13" y2="10"/><line x1="7" y1="13" x2="11" y2="13"/></svg></span>
+      <span class="sec-num">01</span><h2 class="display">프로그램 개요</h2>
+    </div>
     <p class="lead">〈MADE 100〉은 전 세계 AI 크리에이터가 만든 100명의 AI 아이돌이 경쟁하고, 현역 K-POP 가수가 심사하며, 시청자가 직접 9명의 데뷔조를 선발하는 글로벌 데뷔 오디션 프로그램입니다.</p>
     <div class="tbl-wrap"><table>
       <tbody>
@@ -172,7 +304,10 @@
 <!-- 02 -->
 <section id="s2">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">02</span><h2 class="display">기획 의도</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><path d="M10 3a5 5 0 0 1 3 9.5V14H7v-1.5A5 5 0 0 1 10 3Z"/><line x1="8" y1="17" x2="12" y2="17"/></svg></span>
+      <span class="sec-num">02</span><h2 class="display">기획 의도</h2>
+    </div>
     <h3>왜 지금, 이 프로그램인가</h3>
     <p>AI 아이돌의 시대는 이미 시작됐습니다. 플레이브(PLAVE)는 2024년 매출 ₩45억, 고척돔 콘서트 매진을 기록했고, 일본 홀로라이브는 연 매출 ¥43.4B를 올렸습니다. HYBE는 AI 음성 기술로 6개국어 가창이 가능한 프로젝트 '미드낫(MIDNATT)'을, SM은 aespa 세계관의 가상 아티스트 '나이비스(Naevis)'를 선보였습니다. <strong>버추얼·AI 아이돌이 음원·콘서트·차트·광고 모든 영역에서 검증됐습니다.</strong></p>
     <p>기존 AI·버추얼 아이돌은 모두 회사가 단독으로 만들었습니다. 그러나 — <strong>"전 세계 크리에이터가 만든 AI 아이돌이 직접 출연자가 되어 데뷔하는 오디션"은 세계 어디에도 없습니다.</strong> 〈MADE 100〉은 바로 이 빈 자리에서 출발합니다.</p>
@@ -188,16 +323,50 @@
 <!-- 03 -->
 <section id="s3">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">03</span><h2 class="display">프로그램 컨셉</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><path d="M10 3 17 7 10 11 3 7Z"/><path d="M3 11 10 15 17 11"/><path d="M3 14.5 10 18.5 17 14.5"/></svg></span>
+      <span class="sec-num">03</span><h2 class="display">프로그램 컨셉</h2>
+    </div>
     <h3>"AI 아이돌"이란 무엇인가</h3>
     <p>〈MADE 100〉의 출연자는 <strong>100% AI로 만들어진 아이돌</strong>입니다. 뒤에 사람(모션캡처 액터)이 있는 버추얼 아이돌과 다릅니다. AI 아이돌은 외모·목소리·노래·춤·성격(페르소나)·시청자와의 대화까지 모두 AI로 학습되고 생성됩니다.</p>
     <p>각 AI 아이돌은 한 명 또는 한 팀의 <strong>인간 크리에이터</strong>가 만듭니다. 완성된 AI 아이돌은 24시간 활동할 수 있고, 시간이 지나도 늙지 않으며, 학교폭력·열애·계약 분쟁 같은 리스크가 구조적으로 없습니다.</p>
+
     <h3>3단 구조</h3>
-    <div class="grid grid-3">
-      <div class="card"><div class="mono" style="color:var(--accent)">STEP 1 — 공모</div><h4>100명을 모은다</h4><p>전 세계 AI 크리에이터가 자신이 만든 AI 아이돌을 응모. 1,000팀 이상 응모작 중 1차 심사로 본선 100명을 선발합니다.</p></div>
-      <div class="card"><div class="mono" style="color:var(--accent)">STEP 2 — 서바이벌</div><h4>12주간 경쟁한다</h4><p>현역 가수가 심사하고 시청자가 투표. 매주 미션을 거치며 100 → 50 → 30 → 18 → 11명으로 줄어듭니다.</p></div>
-      <div class="card"><div class="mono" style="color:var(--accent)">STEP 3 — 데뷔</div><h4>9명이 데뷔한다</h4><p>최종회에서 데뷔조 'THE NINE'이 결정. 메타버스 콘서트로 데뷔 무대를 갖고 데뷔 음원이 글로벌 동시 발매됩니다.</p></div>
-    </div>
+    <figure class="figure">
+      <svg viewBox="0 0 920 240" role="img" aria-label="공모, 서바이벌, 데뷔 3단계 흐름도">
+        <defs>
+          <marker id="arr3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 Z" fill="#9AA0C2" />
+          </marker>
+        </defs>
+        <line x1="200" y1="92" x2="320" y2="92" stroke="#9AA0C2" stroke-width="2" marker-end="url(#arr3)" />
+        <line x1="520" y1="92" x2="640" y2="92" stroke="#9AA0C2" stroke-width="2" marker-end="url(#arr3)" />
+        <!-- STEP 1 -->
+        <circle cx="120" cy="92" r="56" fill="#EEF1FE" stroke="#5B6BD8" stroke-width="2" />
+        <g fill="none" stroke="#3A49B8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M104 80v24l16 7 16-7V80" /><path d="M104 80l16-7 16 7-16 7Z" />
+        </g>
+        <text x="120" y="180" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="20" font-weight="700" fill="#14141C">STEP 1 · 공모</text>
+        <text x="120" y="206" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="14.5" fill="#5A5A66">100명 모집 — 글로벌 공모전</text>
+        <!-- STEP 2 -->
+        <circle cx="420" cy="92" r="56" fill="#EEF1FE" stroke="#5B6BD8" stroke-width="2" />
+        <g fill="none" stroke="#3A49B8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="402" y="74" width="9" height="20" rx="1.5"/><rect x="415.5" y="66" width="9" height="28" rx="1.5"/><rect x="429" y="80" width="9" height="14" rx="1.5"/>
+          <line x1="402" y1="102" x2="438" y2="102"/>
+        </g>
+        <text x="420" y="180" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="20" font-weight="700" fill="#14141C">STEP 2 · 서바이벌</text>
+        <text x="420" y="206" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="14.5" fill="#5A5A66">12주간 경쟁 — 100 → 11명</text>
+        <!-- STEP 3 -->
+        <circle cx="720" cy="92" r="56" fill="#FBF3DF" stroke="#E6B84A" stroke-width="2" />
+        <g fill="none" stroke="#A9802A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M720 70l4.5 9.2 10.2 1.5-7.4 7.2 1.8 10.1L720 104l-9.1 4.7 1.8-10.1-7.4-7.2 10.2-1.5Z"/>
+        </g>
+        <text x="720" y="180" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="20" font-weight="700" fill="#14141C">STEP 3 · 데뷔</text>
+        <text x="720" y="206" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="14.5" fill="#5A5A66">THE NINE 9명 데뷔</text>
+      </svg>
+      <figcaption>공모로 100명을 모으고, 12주 서바이벌을 거쳐, 9명이 데뷔한다</figcaption>
+    </figure>
+
     <h3>왜 100명에서 9명인가</h3>
     <p>"100"은 어마어마한 규모의 글로벌 오디션을 한눈에 전달하는 숫자입니다. "9"는 K-POP 보이그룹 표준 인원이자, <strong>9개국 1국 1명</strong>으로 구성되는 글로벌 슈퍼그룹의 상징입니다. 100명 중 9명 — 시청자에게 "이 치열한 경쟁에서 살아남은 에이스"라는 인식을 자동으로 만듭니다.</p>
   </div>
@@ -206,13 +375,39 @@
 <!-- 04 핵심 재미 -->
 <section id="s4">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">04</span><h2 class="display">핵심 재미 — 세 겹의 드라마</h2></div>
-    <p class="lead">〈MADE 100〉의 재미는 한 가지가 아닙니다. AI 아이돌의 진화, 그를 만든 인간 크리에이터의 서사, 그리고 시청자의 선택 — 세 겹의 드라마가 12주 동안 동시에 펼쳐집니다.</p>
-    <div class="grid grid-3">
-      <div class="card"><div class="mono" style="color:var(--accent)">DRAMA 1</div><h4>AI 아이돌의 진화</h4><p>1화의 어설픔에서 12화의 완성까지. AI라서 생기는 어색함·실수·성장 과정 자체가 콘텐츠. 매 회차 비포·애프터가 시청자의 충격 포인트.</p></div>
-      <div class="card"><div class="mono" style="color:var(--accent)">DRAMA 2</div><h4>크리에이터의 서사</h4><p>각 AI 아이돌 뒤에는 그를 만든 인간이 있다. 왜 만들었는지, 어떤 마음이었는지 — 부모가 자식을 키우는 서사. 시청자가 응원하는 진짜 감정의 주체.</p></div>
-      <div class="card"><div class="mono" style="color:var(--accent)">DRAMA 3</div><h4>시청자의 선택</h4><p>"당신이 AI의 프로듀서." 전 세계 크리에이터의 창작물 중 시청자가 사랑할 9명을 직접 골라 데뷔시킨다. 프로듀스 101의 국민 프로듀서 권력감.</p></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><path d="M10 2.5 12 7.5 17 9.5 12 11.5 10 16.5 8 11.5 3 9.5 8 7.5Z"/></svg></span>
+      <span class="sec-num">04</span><h2 class="display">핵심 재미 — 세 겹의 드라마</h2>
     </div>
+    <p class="lead">〈MADE 100〉의 재미는 한 가지가 아닙니다. AI 아이돌의 진화, 그를 만든 인간 크리에이터의 서사, 그리고 시청자의 선택 — 세 겹의 드라마가 12주 동안 동시에 펼쳐집니다.</p>
+
+    <figure class="figure">
+      <svg viewBox="0 0 860 340" role="img" aria-label="세 겹의 드라마 — AI 아이돌의 진화, 크리에이터의 서사, 시청자의 선택">
+        <!-- DRAMA 3 (뒤) -->
+        <g>
+          <rect x="220" y="200" width="540" height="110" rx="14" fill="#E4E7F4" stroke="#C7CCE4" stroke-width="1.5" />
+          <text x="252" y="240" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="1.5" fill="#7B80A6">DRAMA 3</text>
+          <text x="252" y="270" font-family="Space Grotesk, sans-serif" font-size="22" font-weight="700" fill="#2A2A3C">시청자의 선택</text>
+          <text x="252" y="294" font-family="Pretendard, sans-serif" font-size="14" fill="#5A5A6E">전 세계 창작물 중 사랑할 9명을 직접 데뷔시킨다</text>
+        </g>
+        <!-- DRAMA 2 (가운데) -->
+        <g>
+          <rect x="150" y="105" width="540" height="110" rx="14" fill="#EFF1FB" stroke="#B9C0E6" stroke-width="1.5" />
+          <text x="182" y="145" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="1.5" fill="#6770A8">DRAMA 2</text>
+          <text x="182" y="175" font-family="Space Grotesk, sans-serif" font-size="22" font-weight="700" fill="#222238">크리에이터의 서사</text>
+          <text x="182" y="199" font-family="Pretendard, sans-serif" font-size="14" fill="#54546A">AI 뒤의 인간 — 부모가 자식을 키우는 진짜 감정</text>
+        </g>
+        <!-- DRAMA 1 (앞) -->
+        <g>
+          <rect x="80" y="10" width="540" height="110" rx="14" fill="#1C1C34" stroke="#3A3A60" stroke-width="1.5" />
+          <text x="112" y="50" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="1.5" fill="#E6B84A">DRAMA 1</text>
+          <text x="112" y="80" font-family="Space Grotesk, sans-serif" font-size="22" font-weight="700" fill="#F4F5FA">AI 아이돌의 진화</text>
+          <text x="112" y="104" font-family="Pretendard, sans-serif" font-size="14" fill="#A6AAC8">1화의 어설픔에서 12화의 완성까지 — 성장 그 자체가 콘텐츠</text>
+        </g>
+      </svg>
+      <figcaption>세 겹의 드라마가 한 화면 위에 동시에 쌓인다 — 이것이 MADE 100의 구조적 재미</figcaption>
+    </figure>
+
     <h3>화려한 심사위원단 — 유명 심사위원 + 현직 버추얼 가수</h3>
     <p>유명 심사위원단과 함께, <strong>이미 데뷔해 활동 중인 현직 버추얼 가수가 신인 AI 아이돌을 심사</strong>합니다. 플레이브(PLAVE)·이세계아이돌·아뽀키(APOKI) 같은 현직 버추얼 아티스트가 심사위원 후보 — "선배가 후배를 본다"는 자연스러움 + 버추얼 업계 당사자만의 전문적 시선을 동시에 만듭니다. AI의 약점(어색함·진화)도 숨기지 않고 콘텐츠로 보여줍니다.</p>
     <h3>시청자를 사로잡는 장치</h3>
@@ -228,7 +423,10 @@
 <!-- 05 출연자 -->
 <section id="s5">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">05</span><h2 class="display">출연자 구성</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><circle cx="7" cy="7" r="2.7"/><circle cx="13.5" cy="8" r="2.3"/><path d="M2.5 16c0-3.2 9-3.2 9 0"/><path d="M11.5 15c.4-2.6 7-2.6 6.8.4"/></svg></span>
+      <span class="sec-num">05</span><h2 class="display">출연자 구성</h2>
+    </div>
     <h3>① 본선 100인 — AI 아이돌</h3>
     <p>글로벌 공모로 모인 1,000+팀 응모작 중 1차 심사로 선발된 100명의 AI 아이돌이 본선 출연자입니다. 30~50개국 출신, 모두 만 18세 이상 외형의 캐릭터입니다.</p>
     <h3>② 인간 크리에이터 — "AI의 부모"</h3>
@@ -240,7 +438,10 @@
 <!-- 06 공모 -->
 <section id="s6">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">06</span><h2 class="display">공모·응모·상금</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><path d="M4 8v4l9 4V4Z"/><path d="M13 7.5a3 3 0 0 1 0 5"/><line x1="6.5" y1="12.5" x2="6.5" y2="17"/></svg></span>
+      <span class="sec-num">06</span><h2 class="display">공모·응모·상금</h2>
+    </div>
     <p>본선 100명은 글로벌 공모전으로 모집합니다. 응모 자격은 국적·연령·성별·경력 무관, 개인 또는 팀 무관, <strong>응모료 무료</strong>입니다. 미성년자는 보호자 동의가 필요합니다.</p>
     <h3>응모작 = "AI 아이돌 1명 풀세트" 5요소</h3>
     <div class="tbl-wrap"><table>
@@ -261,7 +462,10 @@
 <!-- 07 포맷 -->
 <section id="s7">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">07</span><h2 class="display">포맷·미션 구조</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="11" y="3" width="6" height="6" rx="1"/><rect x="3" y="11" width="6" height="6" rx="1"/><rect x="11" y="11" width="6" height="6" rx="1"/></svg></span>
+      <span class="sec-num">07</span><h2 class="display">포맷·미션 구조</h2>
+    </div>
     <p>12주 동안 다양한 미션이 진행됩니다. <strong>기본 실력 미션</strong>과 <strong>"AI라서만 가능한" 미션</strong>을 함께 배치 — 매 미션마다 심사위원단 심사와 시청자 투표로 인원이 줄어듭니다.</p>
     <div class="tbl-wrap"><table>
       <thead><tr><th>미션</th><th>회차</th><th>내용</th></tr></thead>
@@ -277,16 +481,36 @@
       </tbody>
     </table></div>
     <div class="callout"><p>★ 표시 = AI라서만 가능한 미션. 즉석 신곡(인간 불가능한 작곡 속도) · 실시간 팬 영상통화 · 팬 응원 영상통화 — "사람 오디션엔 없는, AI라서 놀라운" 장면을 만듭니다. <strong>팬 영상통화의 핵심은 '실시간 라이브 대화'입니다.</strong> 미리 만든 영상이 아니라, AI 아이돌이 그 자리에서 팬과 진짜로 대화합니다. "AI가 이걸 어떻게 하지?"가 이 프로그램의 핵심 후크입니다.</p></div>
-    <h3>인원 흐름</h3>
-    <div class="funnel">
-      <span class="stage">1,000+팀</span><span class="arrow">→</span>
-      <span class="stage">100</span><span class="arrow">→</span>
-      <span class="stage">50</span><span class="arrow">→</span>
-      <span class="stage">30</span><span class="arrow">→</span>
-      <span class="stage">18</span><span class="arrow">→</span>
-      <span class="stage">11</span><span class="arrow">→</span>
-      <span class="stage" style="color:var(--gold)">THE NINE</span>
-    </div>
+
+    <h3>인원 흐름 — 1,000팀에서 THE NINE까지</h3>
+    <figure class="figure">
+      <svg viewBox="0 0 720 430" role="img" aria-label="응모 1000팀에서 데뷔조 9명까지 줄어드는 퍼널">
+        <!-- 퍼널 세그먼트 -->
+        <g font-family="Space Grotesk, sans-serif" font-weight="700" text-anchor="middle">
+          <polygon points="40,8 680,8 624,58 96,58" fill="#DFE3F4" />
+          <text x="360" y="42" font-size="22" fill="#3A3A4C">1,000+ 팀 응모</text>
+          <polygon points="100,66 620,66 580,116 140,116" fill="#CBD2EE" />
+          <text x="360" y="100" font-size="22" fill="#33334A">100 본선</text>
+          <polygon points="144,124 576,124 540,174 180,174" fill="#A9B4E4" />
+          <text x="360" y="158" font-size="21" fill="#222238">50</text>
+          <polygon points="184,182 536,182 502,232 218,232" fill="#8995DD" />
+          <text x="360" y="216" font-size="21" fill="#15152A">30</text>
+          <polygon points="222,240 498,240 466,290 254,290" fill="#6B79D2" />
+          <text x="360" y="274" font-size="20" fill="#FFFFFF">18</text>
+          <polygon points="258,298 462,298 432,348 288,348" fill="#4F5BC0" />
+          <text x="360" y="332" font-size="20" fill="#FFFFFF">11</text>
+          <polygon points="292,356 428,356 404,410 316,410" fill="#E6B84A" />
+          <text x="360" y="390" font-size="20" fill="#14141C">THE NINE · 9</text>
+        </g>
+        <!-- 단계 화살표 -->
+        <g fill="#9AA0C2" font-family="JetBrains Mono, monospace" font-size="11">
+          <text x="700" y="42" text-anchor="end" fill="#9AA0C2">공모</text>
+          <text x="700" y="216" text-anchor="end" fill="#9AA0C2">서바이벌</text>
+          <text x="700" y="390" text-anchor="end" fill="#A9802A">데뷔</text>
+        </g>
+      </svg>
+      <figcaption>1,000+팀 → 100 → 50 → 30 → 18 → 11 → THE NINE 9명</figcaption>
+    </figure>
     <p>콘셉트 유닛 6종 = 청량 · 다크 · 미래 · 복고 · 보이크러시 · 아방가르드. 각 유닛에 글로벌 작곡가 게스트 1명이 붙습니다.</p>
   </div>
 </section>
@@ -294,7 +518,10 @@
 <!-- 08 회차 -->
 <section id="s8">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">08</span><h2 class="display">회차 구성 — 12부작</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="13" rx="1.5"/><line x1="3" y1="8" x2="17" y2="8"/><line x1="7" y1="2.5" x2="7" y2="5.5"/><line x1="13" y1="2.5" x2="13" y2="5.5"/></svg></span>
+      <span class="sec-num">08</span><h2 class="display">회차 구성 — 12부작</h2>
+    </div>
     <p>12주 동안 100명에서 9명까지 — 4막 구조로 전개됩니다.</p>
 
     <div class="divider-label">Act 1 — 도입 (1~3화)</div>
@@ -370,9 +597,35 @@
 <!-- 09 심사 -->
 <section id="s9">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">09</span><h2 class="display">심사·평가·투표</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><path d="M4 10.5 8.5 15 16 5.5"/></svg></span>
+      <span class="sec-num">09</span><h2 class="display">심사·평가·투표</h2>
+    </div>
     <h3>심사위원단 심사 50% + 시청자 투표 50%</h3>
     <p>매 미션의 결과는 <strong>심사위원단 50%</strong>와 <strong>글로벌 시청자 투표 50%</strong>로 결정됩니다. 심사위원단 = 유명 심사위원(케이팝 프로듀서·아티스트) + 현직 버추얼 가수(플레이브·이세계아이돌·아뽀키 등 후보). <strong>버추얼 선배가 AI 아이돌 후배를 심사</strong>하는 구도가 이 프로그램의 시그니처입니다.</p>
+
+    <figure class="figure">
+      <svg viewBox="0 0 560 200" role="img" aria-label="심사위원 50%와 시청자 투표 50%의 평가 비중">
+        <circle cx="160" cy="100" r="78" fill="none" stroke="#E4E7F4" stroke-width="26" />
+        <circle cx="160" cy="100" r="78" fill="none" stroke="#5B6BD8" stroke-width="26"
+          stroke-dasharray="245 490" stroke-dashoffset="0" transform="rotate(-90 160 100)" stroke-linecap="butt" />
+        <circle cx="160" cy="100" r="78" fill="none" stroke="#E6B84A" stroke-width="26"
+          stroke-dasharray="245 490" stroke-dashoffset="-245" transform="rotate(-90 160 100)" stroke-linecap="butt" />
+        <text x="160" y="94" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="30" font-weight="700" fill="#14141C">50:50</text>
+        <text x="160" y="116" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="13" fill="#6E6E80">최종 점수</text>
+        <!-- 범례 -->
+        <g font-family="Pretendard, sans-serif" font-size="15">
+          <rect x="300" y="68" width="16" height="16" rx="3" fill="#5B6BD8" />
+          <text x="326" y="81" fill="#2A2A3C" font-weight="600">심사위원단 심사 50%</text>
+          <text x="326" y="100" fill="#6E6E80" font-size="12.5">유명 심사위원 + 현직 버추얼 가수</text>
+          <rect x="300" y="118" width="16" height="16" rx="3" fill="#E6B84A" />
+          <text x="326" y="131" fill="#2A2A3C" font-weight="600">글로벌 시청자 투표 50%</text>
+          <text x="326" y="150" fill="#6E6E80" font-size="12.5">블록체인 기반 · 5개국어 · 1인 1일 1표</text>
+        </g>
+      </svg>
+      <figcaption>심사위원단과 시청자가 정확히 절반씩 — 어느 한쪽도 결과를 독점하지 않는다</figcaption>
+    </figure>
+
     <h3>"조작 0%" — 블록체인 투표</h3>
     <p>2019년 프로듀스 시리즈 투표 조작 사건은 한국 오디션 산업의 신뢰에 상처를 남겼습니다. 〈MADE 100〉은 블록체인 기반 투표 시스템으로 신뢰성을 차별점으로 만듭니다.</p>
     <ul class="clean">
@@ -389,7 +642,10 @@
 <!-- 10 출연진 -->
 <section id="s10">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">10</span><h2 class="display">출연진 — MC·심사위원</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="8" y="2.5" width="4" height="9" rx="2"/><path d="M5 9.5a5 5 0 0 0 10 0"/><line x1="10" y1="14.5" x2="10" y2="17.5"/></svg></span>
+      <span class="sec-num">10</span><h2 class="display">출연진 — MC·심사위원</h2>
+    </div>
     <div class="grid grid-3">
       <div class="card"><h4>메인 MC (인간)</h4><p>K-POP 글로벌 인지도 + 진행력. 후보 — BoA / 태민 / 에릭남 등.</p></div>
       <div class="card"><h4>보조 MC — AI MC ★</h4><p>이 프로그램 전용 <strong>AI MC를 자체 제작</strong>. AI 아이돌 오디션을 AI가 진행 — 컨셉과 완벽히 맞물리는 시그니처. 진행·자막·다국어 안내 담당.</p></div>
@@ -403,7 +659,10 @@
 <!-- 11 연출 -->
 <section id="s11">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">11</span><h2 class="display">무대·비주얼·연출</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="2.5" y="5.5" width="11" height="9" rx="1.5"/><path d="M13.5 8.5 17.5 6v8l-4-2.5Z"/></svg></span>
+      <span class="sec-num">11</span><h2 class="display">무대·비주얼·연출</h2>
+    </div>
     <div class="grid grid-2">
       <div class="card"><h4>하이브리드 무대</h4><p>AI 캐릭터를 실제 무대에 LED·홀로그램으로 구현. 발표식(5·9·12화)은 메타버스 무대를 결합합니다.</p></div>
       <div class="card"><h4>AI 진화 비주얼</h4><p>1화→12화로 갈수록 AI 아이돌이 정교해지는 모습을 시각화. 매 회차 비포·애프터가 시청자의 충격 포인트.</p></div>
@@ -416,7 +675,10 @@
 <!-- 12 음악 -->
 <section id="s12">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">12</span><h2 class="display">음악</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><path d="M8 14.5V5l8-2v9.5"/><circle cx="6" cy="14.5" r="2.4"/><circle cx="14" cy="12.5" r="2.4"/></svg></span>
+      <span class="sec-num">12</span><h2 class="display">음악</h2>
+    </div>
     <p>시즌 1에서 총 8곡이 발매 가능합니다.</p>
     <ul class="clean">
       <li><strong>주제가</strong> — 시즌 시그니처 송. 1화 공개, 12화 마지막 합창.</li>
@@ -430,8 +692,43 @@
 <!-- 13 데뷔조 -->
 <section id="s13">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">13</span><h2 class="display">데뷔조 — THE NINE</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><g fill="currentColor" stroke="none"><circle cx="6" cy="6" r="1.6"/><circle cx="10" cy="6" r="1.6"/><circle cx="14" cy="6" r="1.6"/><circle cx="6" cy="10" r="1.6"/><circle cx="10" cy="10" r="1.6"/><circle cx="14" cy="10" r="1.6"/><circle cx="6" cy="14" r="1.6"/><circle cx="10" cy="14" r="1.6"/><circle cx="14" cy="14" r="1.6"/></g></svg></span>
+      <span class="sec-num">13</span><h2 class="display">데뷔조 — THE NINE</h2>
+    </div>
     <p class="lead">시즌 1의 결과물 = THE NINE. 9개국 출신의 남성 9인조 글로벌 보이그룹.</p>
+
+    <figure class="figure">
+      <svg viewBox="0 0 760 280" role="img" aria-label="THE NINE 9명의 포지션 구성">
+        <defs>
+          <filter id="nineGlow" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="4" result="b" />
+            <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+          </filter>
+        </defs>
+        <!-- 연결 격자 -->
+        <g stroke="#E6B84A" stroke-width="1.4" stroke-opacity="0.4">
+          <line x1="170" y1="80" x2="380" y2="80" /><line x1="380" y1="80" x2="590" y2="80" />
+          <line x1="170" y1="150" x2="380" y2="150" /><line x1="380" y1="150" x2="590" y2="150" />
+          <line x1="170" y1="220" x2="380" y2="220" /><line x1="380" y1="220" x2="590" y2="220" />
+          <line x1="170" y1="80" x2="170" y2="220" /><line x1="380" y1="80" x2="380" y2="220" /><line x1="590" y1="80" x2="590" y2="220" />
+        </g>
+        <!-- 9 멤버 노드 -->
+        <g filter="url(#nineGlow)">
+          <circle cx="170" cy="80" r="22" fill="#E6B84A" /><circle cx="380" cy="80" r="22" fill="#E6B84A" /><circle cx="590" cy="80" r="22" fill="#E6B84A" />
+          <circle cx="170" cy="150" r="22" fill="#E6B84A" /><circle cx="380" cy="150" r="26" fill="#E6B84A" /><circle cx="590" cy="150" r="22" fill="#E6B84A" />
+          <circle cx="170" cy="220" r="22" fill="#E6B84A" /><circle cx="380" cy="220" r="22" fill="#E6B84A" /><circle cx="590" cy="220" r="22" fill="#E6B84A" />
+        </g>
+        <g font-family="Pretendard, sans-serif" font-size="13" text-anchor="middle" fill="#14141C" font-weight="600">
+          <text x="170" y="84">보컬</text><text x="380" y="84">보컬</text><text x="590" y="84">래퍼</text>
+          <text x="170" y="154">댄서</text><text x="380" y="155">리더</text><text x="590" y="154">래퍼</text>
+          <text x="170" y="224">댄서</text><text x="380" y="224">비주얼</text><text x="590" y="224">막내</text>
+        </g>
+        <text x="380" y="266" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="17" font-weight="700" fill="#A9802A" letter-spacing="2">THE NINE — 9 MEMBERS</text>
+      </svg>
+      <figcaption>메인·리드 보컬 2 · 댄서 2 · 래퍼 2 · 비주얼 1 · 막내 1 · 리더 — 9개국 1국 1명</figcaption>
+    </figure>
+
     <div class="grid grid-2">
       <div class="card"><h4>구성</h4><p>남성 9인조 (K-POP 표준). 글로벌 셀 = 1국 1명. 포지션 — 메인·리드 보컬 2, 메인·리드 댄서 2, 메인·서브 래퍼 2, 비주얼 1, 막내 1, 리더 겸직.</p></div>
       <div class="card"><h4>레퍼런스 톤</h4><p>BTS · 세븐틴 · NCT · 스트레이키즈 · 투모로우바이투게더 · 플레이브</p></div>
@@ -444,7 +741,10 @@
 <!-- 14 시청자 -->
 <section id="s14">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">14</span><h2 class="display">시청자 참여·디지털</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="6" y="2.5" width="8" height="15" rx="2"/><path d="M10 9.5c-.9-1.7-3.4-1-3.4 1 0 1.6 2.3 3 3.4 4 1.1-1 3.4-2.4 3.4-4 0-2-2.5-2.7-3.4-1Z"/></svg></span>
+      <span class="sec-num">14</span><h2 class="display">시청자 참여·디지털</h2>
+    </div>
     <p>시청자는 구경꾼이 아니라 데뷔조를 만드는 주체입니다. 디지털 플랫폼(TikTok·YouTube)이 참여의 무대입니다.</p>
     <ul class="clean">
       <li>매 회차 챌린지 — 시청자가 직접 영상을 만들어 참여</li>
@@ -459,7 +759,10 @@
 <!-- 15 차별점 -->
 <section id="s15">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">15</span><h2 class="display">차별점</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><line x1="10" y1="3" x2="10" y2="17"/><path d="M10 4 5.5 11h9Z"/><path d="M5.5 11a2.2 2.2 0 0 0 4.5 0"/><path d="M10 11a2.2 2.2 0 0 0 4.5 0"/></svg></span>
+      <span class="sec-num">15</span><h2 class="display">차별점</h2>
+    </div>
     <p class="lead">〈MADE 100〉은 기존 K-POP 오디션과 본질적으로 다릅니다 — AI 아이돌이 직접 출연하고, 전 세계가 만들고, 시청자가 데뷔시킵니다.</p>
     <div class="tbl-wrap"><table>
       <thead><tr><th>비교</th><th>기존 K-POP 오디션</th><th>MADE 100</th></tr></thead>
@@ -479,7 +782,10 @@
 <!-- 16 시장성 -->
 <section id="s16">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">16</span><h2 class="display">시장성·기대효과</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><polyline points="3,15 8,9.5 12,12.5 17,5"/><polyline points="12.5,5 17,5 17,9.5"/></svg></span>
+      <span class="sec-num">16</span><h2 class="display">시장성·기대효과</h2>
+    </div>
     <div class="grid grid-3">
       <div class="card"><div class="kpi">₩45억</div><div class="kpi-label">플레이브 2024 매출 · 고척돔 매진</div></div>
       <div class="card"><div class="kpi">¥43.4B</div><div class="kpi-label">홀로라이브 FY25 · 영업이익률 38%</div></div>
@@ -505,7 +811,10 @@
 <!-- 17 일정 예산 -->
 <section id="s17">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">17</span><h2 class="display">일정·예산</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="2.5" y="4" width="15" height="13" rx="1.5"/><line x1="2.5" y1="8" x2="17.5" y2="8"/><line x1="6.5" y1="2.5" x2="6.5" y2="5.5"/><line x1="13.5" y1="2.5" x2="13.5" y2="5.5"/><line x1="10" y1="11" x2="10" y2="14.5"/><line x1="8" y1="12.5" x2="12" y2="12.5"/></svg></span>
+      <span class="sec-num">17</span><h2 class="display">일정·예산</h2>
+    </div>
     <h3>제작 일정</h3>
     <div class="tbl-wrap"><table>
       <tbody>
@@ -535,7 +844,10 @@
 <!-- 18 제작 -->
 <section id="s18">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">18</span><h2 class="display">제작·공동제작사</h2></div>
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="4" y="3.5" width="12" height="14" rx="1"/><line x1="7" y1="7" x2="9" y2="7"/><line x1="11" y1="7" x2="13" y2="7"/><line x1="7" y1="10.5" x2="9" y2="10.5"/><line x1="11" y1="10.5" x2="13" y2="10.5"/><line x1="8.5" y1="17.5" x2="8.5" y2="14"/><line x1="11.5" y1="17.5" x2="11.5" y2="14"/></svg></span>
+      <span class="sec-num">18</span><h2 class="display">제작·공동제작사</h2>
+    </div>
     <h3>(주)써니엔터테인먼트 — 최첨단 엔터테크 전문 기획사</h3>
     <p>써니엔터테인먼트는 엔터테인먼트와 첨단 기술을 융합하는 <strong>엔터테크(Entertainment + Tech) 전문 기획사</strong>입니다. 콘텐츠·공간·기술이 결합된 차세대 엔터테인먼트 프로젝트를 기획·제작합니다.</p>
     <div class="grid grid-3">
@@ -550,10 +862,29 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ============ FOOTER ============ -->
 <footer>
+  <svg class="hero-bg" viewBox="0 0 1440 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="1440" height="420" fill="url(#heroDots)" />
+  </svg>
   <div class="wrap">
-    <div class="mono">MADE 100 &nbsp;/&nbsp; 방송 프로그램 기획서 V1.1 &nbsp;/&nbsp; 2026</div>
+    <div class="brand">
+      <svg class="logomark" viewBox="0 0 48 48" aria-hidden="true">
+        <rect width="48" height="48" rx="11" fill="#1C1C34" stroke="#33335A" stroke-width="1" />
+        <g fill="#5B6BD8" fill-opacity="0.55">
+          <circle cx="9" cy="9" r="1.7" /><circle cx="24" cy="7" r="1.7" /><circle cx="39" cy="9" r="1.7" />
+          <circle cx="7" cy="24" r="1.7" /><circle cx="41" cy="24" r="1.7" />
+          <circle cx="9" cy="39" r="1.7" /><circle cx="24" cy="41" r="1.7" /><circle cx="39" cy="39" r="1.7" />
+        </g>
+        <g fill="#E6B84A">
+          <circle cx="16" cy="16" r="2.9" /><circle cx="24" cy="16" r="2.9" /><circle cx="32" cy="16" r="2.9" />
+          <circle cx="16" cy="24" r="2.9" /><circle cx="24" cy="24" r="2.9" /><circle cx="32" cy="24" r="2.9" />
+          <circle cx="16" cy="32" r="2.9" /><circle cx="24" cy="32" r="2.9" /><circle cx="32" cy="32" r="2.9" />
+        </g>
+      </svg>
+      <div class="brand-tx">MADE 100<small>Global AI Idol Audition</small></div>
+    </div>
+    <div class="mono">MADE 100 &nbsp;/&nbsp; 방송 프로그램 기획서 V2 &nbsp;/&nbsp; 2026</div>
     <h2 class="display" style="margin: var(--s3) 0;">전 세계가 만든 100명.<br/>단 9명의 데뷔.</h2>
     <p style="color: oklch(78% 0.02 255); max-width: 56ch;">유명 심사위원단과 현직 버추얼 가수가 심사하고, 시청자가 데뷔시킨다. AI 아이돌이 직접 데뷔하는 세계 최초 글로벌 오디션 — 〈MADE 100〉.</p>
     <div class="pill-row" style="margin-top: var(--s4);">
