@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MADE 100 × TikTok — Global Partnership Proposal</title>
+<meta name="description" content="100 AI idols created by the world, nine debuted by viewers — the world's first AI idol debut audition. A TikTok global partnership proposal. EN / 中文." />
+<meta name="theme-color" content="#0D0D15" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<style>
+  :root {
+    --bg-primary: #F7F8FA; --bg-secondary: #ECEEF2; --bg-card: #FCFCFD;
+    --fg-primary: #14141C; --fg-secondary: #383843; --fg-muted: oklch(52% 0.015 265);
+    --accent: oklch(55% 0.18 255); --accent-soft: oklch(95% 0.035 255); --accent-deep: oklch(38% 0.16 255);
+    --gold: oklch(72% 0.13 80); --gold-soft: oklch(95% 0.04 80);
+    --tiktok: oklch(72% 0.15 195);
+    --line: oklch(45% 0.02 265 / 0.16);
+    --radius-sm: 4px; --radius-md: 8px; --radius-pill: 999px;
+    --s1: 8px; --s2: 16px; --s3: 24px; --s4: 32px; --s6: 48px; --s8: 64px; --s12: 96px;
+    --shadow-sm: 0 1px 2px oklch(20% 0.02 265 / 0.06);
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --mono: "JetBrains Mono", "Pretendard", sans-serif;
+    --display: "Space Grotesk", "Pretendard", sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg-primary); color: var(--fg-primary); -webkit-font-smoothing: antialiased; text-wrap: pretty; }
+
+  /* 언어별 폰트 스코프 */
+  .doc[data-lang="ko"] { font-family: "Pretendard", system-ui, sans-serif; line-height: 1.62; --mono: "JetBrains Mono","Pretendard",sans-serif; --display: "Space Grotesk","Pretendard",sans-serif; }
+  .doc[data-lang="en"] { font-family: "Pretendard", system-ui, sans-serif; line-height: 1.6; --mono: "JetBrains Mono","Pretendard",sans-serif; --display: "Space Grotesk","Pretendard",sans-serif; }
+  .doc[data-lang="zh"] { font-family: "Noto Sans SC", system-ui, sans-serif; line-height: 1.7; --mono: "JetBrains Mono","Noto Sans SC",sans-serif; --display: "Space Grotesk","Noto Sans SC",sans-serif; }
+  .doc[data-lang="zh"] h1, .doc[data-lang="zh"] .kpi, .doc[data-lang="zh"] .axis-no, .doc[data-lang="zh"] .funnel .stage, .doc[data-lang="zh"] .brand-tx { font-family: "Space Grotesk", "Noto Sans SC", sans-serif; }
+
+  /* 언어 전환 표시 */
+  .doc { display: none; }
+  body.show-ko .doc[data-lang="ko"] { display: block; }
+  body.show-en .doc[data-lang="en"] { display: block; }
+  body.show-zh .doc[data-lang="zh"] { display: block; }
+
+  /* 언어 스위처 */
+  .lang-switch { position: fixed; top: 16px; right: 16px; z-index: 200; display: flex; gap: 3px;
+    background: oklch(22% 0.02 265 / 0.72); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border: 1px solid oklch(70% 0.03 255 / 0.28); border-radius: var(--radius-pill); padding: 4px; }
+  .lang-switch button { font-family: "JetBrains Mono", "Noto Sans SC", sans-serif; font-size: 0.74rem; font-weight: 500;
+    letter-spacing: 0.03em; padding: 7px 15px; border-radius: var(--radius-pill); border: none; background: transparent;
+    color: oklch(82% 0.02 255); cursor: pointer; transition: background var(--ease) 200ms, color var(--ease) 200ms; }
+  .lang-switch button:hover { color: #fff; }
+  .lang-switch button.active { background: #FCFCFD; color: #14141C; }
+
+  .mono { font-family: var(--mono); letter-spacing: 0.10em; text-transform: uppercase; font-size: 0.72rem; color: var(--fg-muted); }
+  .display { font-family: var(--display); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 var(--s6); }
+  @media (max-width: 600px) { .wrap { padding: 0 var(--s3); } }
+  section { padding: var(--s12) 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: none; }
+
+  .hero { position: relative; overflow: hidden; background: linear-gradient(180deg, #0D0D15 0%, #15152A 100%); color: var(--bg-primary); padding: var(--s8) 0 var(--s12); }
+  .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+  .hero .wrap { position: relative; z-index: 1; }
+  .hero .mono { color: oklch(68% 0.04 255); }
+  .hero h1 { font-family: "Space Grotesk", sans-serif; font-size: clamp(2.6rem, 1.4rem + 5.5vw, 6rem); font-weight: 700; line-height: 0.98; letter-spacing: -0.03em; margin: var(--s3) 0 var(--s2); }
+  .hero h1 .x { color: var(--tiktok); font-weight: 500; }
+  .hero .tagline { font-size: clamp(1.15rem, 0.9rem + 0.7vw, 1.6rem); color: oklch(83% 0.03 255); font-weight: 500; letter-spacing: -0.01em; }
+  .hero .sub { margin-top: var(--s3); max-width: 60ch; color: oklch(72% 0.02 255); font-size: 1.02rem; }
+  .doc[data-lang="zh"] .hero .sub { max-width: 46em; }
+  .hero-meta { display: flex; gap: var(--s1); flex-wrap: wrap; margin-top: var(--s6); }
+  .hero-meta .badge { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.05em; padding: 7px 13px; border: 1px solid oklch(60% 0.04 255 / 0.45); border-radius: var(--radius-pill); color: oklch(85% 0.03 255); }
+  .brand { display: flex; align-items: center; gap: 13px; margin-bottom: var(--s4); }
+  .brand .logomark { width: 48px; height: 48px; flex: none; }
+  .brand .brand-tx { font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: 0.04em; color: oklch(88% 0.025 255); }
+  .brand .brand-tx small { display: block; font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.16em; color: oklch(58% 0.045 255); text-transform: uppercase; margin-top: 3px; }
+
+  .sec-head { display: flex; align-items: center; gap: var(--s2); margin-bottom: var(--s6); }
+  .sec-icon { display: inline-flex; padding: 8px; background: var(--accent-soft); border-radius: var(--radius-md); flex: none; }
+  .sec-icon svg { display: block; width: 22px; height: 22px; stroke: var(--accent); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .sec-num { font-family: var(--mono); font-size: 0.82rem; color: var(--accent); font-weight: 500; }
+  h2.display { font-size: clamp(1.7rem, 1.2rem + 1.7vw, 2.7rem); font-weight: 600; line-height: 1.12; letter-spacing: -0.02em; }
+  h3 { font-family: var(--display); font-size: 1.22rem; font-weight: 600; letter-spacing: -0.01em; margin: var(--s4) 0 var(--s2); }
+  h4 { font-size: 1.02rem; font-weight: 600; color: var(--fg-primary); margin: var(--s3) 0 var(--s1); }
+  p { margin-bottom: var(--s2); color: var(--fg-secondary); max-width: 74ch; }
+  .doc[data-lang="zh"] p { max-width: 48em; }
+  strong { font-weight: 600; color: var(--fg-primary); }
+  .doc[data-lang="zh"] strong { font-weight: 700; }
+  .lead { font-size: 1.2rem; color: var(--fg-primary); font-weight: 500; max-width: 66ch; line-height: 1.5; }
+  .doc[data-lang="zh"] .lead { max-width: 42em; line-height: 1.6; }
+  .callout { background: var(--accent-soft); border-left: 3px solid var(--accent); padding: var(--s3); border-radius: 0 var(--radius-md) var(--radius-md) 0; margin: var(--s3) 0; }
+  .callout p { color: var(--accent-deep); font-weight: 500; margin: 0; }
+  .callout.gold { background: var(--gold-soft); border-left-color: var(--gold); }
+  .callout.gold p { color: oklch(42% 0.1 80); }
+  .grid { display: grid; gap: var(--s3); }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 860px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; } }
+  .card { background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius-md); padding: var(--s3); box-shadow: var(--shadow-sm); }
+  .card h3, .card h4 { margin-top: 0; }
+  .card .tag { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.06em; color: var(--accent); text-transform: uppercase; }
+  .kpi { font-family: "Space Grotesk", sans-serif; font-size: 2.1rem; font-weight: 700; letter-spacing: -0.02em; color: var(--accent); line-height: 1; }
+  .kpi-label { margin-top: var(--s1); font-size: 0.88rem; color: var(--fg-muted); }
+  table { width: 100%; border-collapse: collapse; margin: var(--s3) 0; font-size: 0.92rem; }
+  th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--fg-muted); font-weight: 500; }
+  td { color: var(--fg-secondary); }
+  td strong { color: var(--fg-primary); }
+  tr:last-child td { border-bottom: none; }
+  .tbl-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-md); }
+  ul.clean { list-style: none; margin: var(--s2) 0; }
+  ul.clean li { padding-left: var(--s3); position: relative; margin-bottom: 6px; color: var(--fg-secondary); max-width: 74ch; }
+  ul.clean li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
+  .toc { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s1); }
+  @media (max-width: 760px) { .toc { grid-template-columns: 1fr; } }
+  .toc a { display: flex; gap: var(--s2); padding: 11px 13px; border: 1px solid var(--line); border-radius: var(--radius-sm); text-decoration: none; color: var(--fg-secondary); transition: background var(--ease) 200ms, border-color var(--ease) 200ms; font-size: 0.9rem; }
+  .toc a:hover { background: var(--accent-soft); border-color: var(--accent); }
+  .toc .n { font-family: var(--mono); color: var(--accent); font-size: 0.82rem; }
+  .axis { border: 1px solid var(--line); border-radius: var(--radius-md); padding: var(--s3); margin-bottom: var(--s2); background: var(--bg-card); }
+  .axis-head { display: flex; align-items: baseline; gap: var(--s2); flex-wrap: wrap; margin-bottom: var(--s1); }
+  .axis-no { font-family: "Space Grotesk", sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+  .axis-title { font-family: var(--display); font-size: 1.12rem; font-weight: 600; }
+  .funnel { display: flex; gap: var(--s1); flex-wrap: wrap; align-items: center; margin: var(--s3) 0; }
+  .funnel .stage { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--accent); }
+  .funnel .arrow { color: var(--fg-muted); }
+  .funnel .stage.gold { color: var(--gold); }
+  footer { position: relative; overflow: hidden; background: linear-gradient(180deg, #15152A 0%, #0D0D15 100%); color: oklch(76% 0.02 255); padding: var(--s12) 0 var(--s8); }
+  footer .wrap { position: relative; z-index: 1; }
+  footer .mono { color: oklch(58% 0.04 255); }
+  footer h2 { color: var(--bg-primary); }
+  .pill-row { display: flex; gap: var(--s1); flex-wrap: wrap; margin: var(--s2) 0; }
+  .pill { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.04em; background: var(--bg-secondary); color: var(--fg-secondary); padding: 5px 11px; border-radius: var(--radius-pill); }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body class="show-ko">
+
+<div class="lang-switch" role="group" aria-label="Language">
+  <button data-set="ko" class="active">한국어</button>
+  <button data-set="en">EN</button>
+  <button data-set="zh">中文</button>
+</div>
+
+<!-- ============================================================ -->
+<!-- ===================== ENGLISH ============================== -->
+<!-- ============================================================ -->
+<!-- ============================================================ -->
+<!-- ===================== 한국어 =============================== -->
+<!-- ============================================================ -->
+<div class="doc" data-lang="ko">
+<header class="hero">
+  <svg class="hero-bg" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="1440" height="760" fill="url(#heroDots)" /><rect width="1440" height="760" fill="url(#heroGlow)" />
+  </svg>
+  <div class="wrap">
+    <div class="brand">
+      <svg class="logomark" viewBox="0 0 48 48" aria-label="MADE 100 logo">
+        <rect width="48" height="48" rx="11" fill="#1C1C34" stroke="#33335A" stroke-width="1" />
+        <g fill="#5B6BD8" fill-opacity="0.55"><circle cx="9" cy="9" r="1.7"/><circle cx="24" cy="7" r="1.7"/><circle cx="39" cy="9" r="1.7"/><circle cx="7" cy="24" r="1.7"/><circle cx="41" cy="24" r="1.7"/><circle cx="9" cy="39" r="1.7"/><circle cx="24" cy="41" r="1.7"/><circle cx="39" cy="39" r="1.7"/></g>
+        <g fill="#E6B84A"><circle cx="16" cy="16" r="2.9"/><circle cx="24" cy="16" r="2.9"/><circle cx="32" cy="16" r="2.9"/><circle cx="16" cy="24" r="2.9"/><circle cx="24" cy="24" r="2.9"/><circle cx="32" cy="24" r="2.9"/><circle cx="16" cy="32" r="2.9"/><circle cx="24" cy="32" r="2.9"/><circle cx="32" cy="32" r="2.9"/></g>
+      </svg>
+      <div class="brand-tx">MADE 100<small>Global AI Idol Audition</small></div>
+    </div>
+    <div class="mono">글로벌 파트너십 제안서 &nbsp;/&nbsp; SUNNY ENT. × 스타로드이엔엠 &nbsp;/&nbsp; 2026</div>
+    <h1 class="display">MADE 100 <span class="x">×</span> TikTok</h1>
+    <div class="tagline">전 세계가 만든 100명의 AI 아이돌.<br/>TikTok이 9명을 데뷔시킨다.</div>
+    <p class="sub">〈MADE 100〉은 TikTok 없이는 작동하지 않는 포맷입니다. 챌린지·후보 계정·LIVE·시청자 투표가 전부 TikTok에서 일어납니다. TikTok에게 이것은 사후 마케팅 채널이 아니라 — 쇼 그 자체입니다.</p>
+    <div class="hero-meta">
+      <span class="badge">세계 최초 AI 아이돌 데뷔 오디션</span>
+      <span class="badge">12부작 · 2026년 10월</span>
+      <span class="badge">글로벌 100개국 목표</span>
+      <span class="badge">데뷔조 — THE NINE</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><line x1="4" y1="5" x2="16" y2="5"/><line x1="4" y1="10" x2="16" y2="10"/><line x1="4" y1="15" x2="11" y2="15"/></svg></span>
+      <span class="sec-num">00</span><h2 class="display">목차</h2>
+    </div>
+    <nav class="toc">
+      <a href="#ko-s1"><span class="n">01</span><span>제안 요약</span></a>
+      <a href="#ko-s2"><span class="n">02</span><span>프로그램 — MADE 100</span></a>
+      <a href="#ko-s3"><span class="n">03</span><span>왜 TikTok에 딱인가</span></a>
+      <a href="#ko-s4"><span class="n">04</span><span>TikTok = 쇼 그 자체</span></a>
+      <a href="#ko-s5"><span class="n">05</span><span>TikTok 협업 4축</span></a>
+      <a href="#ko-s6"><span class="n">06</span><span>시너지 — 누가 무엇을 얻나</span></a>
+      <a href="#ko-s7"><span class="n">07</span><span>12주 운영 — 챌린지·글로벌</span></a>
+      <a href="#ko-s8"><span class="n">08</span><span>시장 검증</span></a>
+      <a href="#ko-s9"><span class="n">09</span><span>글로벌 도달·기대 성과</span></a>
+      <a href="#ko-s10"><span class="n">10</span><span>일정·다음 단계</span></a>
+      <a href="#ko-s11"><span class="n">11</span><span>제작사 소개</span></a>
+      <a href="#ko-s12"><span class="n">12</span><span>함께 만들기</span></a>
+    </nav>
+  </div>
+</section>
+
+<section id="ko-s1">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="4" y="3" width="12" height="14" rx="1.5"/><line x1="7" y1="7" x2="13" y2="7"/><line x1="7" y1="10" x2="13" y2="10"/><line x1="7" y1="13" x2="11" y2="13"/></svg></span>
+      <span class="sec-num">01</span><h2 class="display">제안 요약</h2>
+    </div>
+    <p class="lead">〈MADE 100〉 — 전 세계 AI 크리에이터가 만든 100명의 AI 아이돌이 경쟁하고, 시청자가 직접 9명의 데뷔조 'THE NINE'을 데뷔시키는 세계 최초 글로벌 AI 아이돌 데뷔 오디션입니다. 그리고 이 프로그램의 무대는 — TikTok입니다.</p>
+    <p>(주)써니엔터테인먼트와 스타로드이엔엠(방송·글로벌 공연 제작 전문)이 공동 제작하는 12부작 방송 프로그램으로, 2026년 10월 방영을 목표로 합니다. 방송은 한국이 보지만, <strong>이 프로그램이 진짜로 살아 움직이는 곳은 TikTok</strong>입니다.</p>
+    <h3>TikTok에 제안하는 것</h3>
+    <p>단발 광고 협찬이 아닙니다. TikTok이 이미 검증해 온 글로벌 음악 IP 플레이북 — <strong>Branded Hashtag Challenge · SoundOn · TikTok LIVE</strong> — 을 'AI 아이돌 데뷔 오디션'이라는 새 카테고리로 확장하는 <strong>전략적 파트너십</strong>입니다.</p>
+    <div class="grid grid-3">
+      <div class="card"><div class="tag">제안 1</div><h4>쇼의 엔진</h4><p>12주 챌린지·후보 계정·LIVE·투표 50%가 전부 TikTok에서 작동. TikTok이 프로그램의 운영 인프라.</p></div>
+      <div class="card"><div class="tag">제안 2</div><h4>음원·콘서트</h4><p>THE NINE 데뷔곡 TikTok 동시 발매, 데뷔 메타버스 콘서트 TikTok LIVE 글로벌 송출.</p></div>
+      <div class="card"><div class="tag">제안 3</div><h4>카테고리 선점</h4><p>"AI 아이돌 오디션 = TikTok" 등식을 세계 최초로 소유. 시리즈로 확장 가능.</p></div>
+    </div>
+    <div class="callout"><p>"TikTok은 우리의 프로모션이 아닙니다. TikTok이 쇼 그 자체입니다." — TikTok isn't our promotion. TikTok <em>is</em> the show.</p></div>
+  </div>
+</section>
+
+<section id="ko-s2">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><path d="M10 2.5 12 7.5 17 9.5 12 11.5 10 16.5 8 11.5 3 9.5 8 7.5Z"/></svg></span>
+      <span class="sec-num">02</span><h2 class="display">프로그램 — MADE 100</h2>
+    </div>
+    <p>전 세계 AI 크리에이터가 만든 <strong>100% AI로 만들어진 아이돌</strong> 100명이 본선에 오릅니다. 12주 서바이벌을 거쳐, 유명 심사위원단과 현직 버추얼 가수의 심사 50% + 글로벌 시청자 투표 50%로 9명이 데뷔합니다 — 남성 9인조 글로벌 보이그룹 <strong>THE NINE</strong>.</p>
+    <div class="funnel">
+      <span class="stage">1,000+팀</span><span class="arrow">→</span>
+      <span class="stage">100</span><span class="arrow">→</span>
+      <span class="stage">50</span><span class="arrow">→</span>
+      <span class="stage">30</span><span class="arrow">→</span>
+      <span class="stage">18</span><span class="arrow">→</span>
+      <span class="stage">11</span><span class="arrow">→</span>
+      <span class="stage gold">THE NINE</span>
+    </div>
+    <h3>핵심 컨셉 — "AI라서만 가능한" 쇼</h3>
+    <p>보컬·댄스·배틀 같은 미션은 사람 오디션에도 있습니다. 〈MADE 100〉의 후크는 <strong>"AI가 이걸 어떻게 하지?"</strong> 싶은 미션입니다 — 시청자 키워드로 몇 분 만에 신곡을 완성하는 <strong>즉석 작곡</strong>, AI 아이돌이 팬과 대본 없이 그 자리에서 대화하는 <strong>실시간 라이브 영상통화</strong>. 이 장면들은 짧고 충격적이고 — 그래서 TikTok에서 폭발합니다.</p>
+    <div class="grid grid-3">
+      <div class="card"><h4>세 겹의 드라마</h4><p>AI 아이돌의 진화 + 그를 만든 인간 크리에이터의 서사 + 시청자의 선택. 감정의 축이 셋.</p></div>
+      <div class="card"><h4>리스크 0 출연자</h4><p>학교폭력·열애·계약 분쟁이 구조적으로 없는 출연자. 24시간 활동, 다국어 동시.</p></div>
+      <div class="card"><h4>조작 0% 투표</h4><p>블록체인 기반 투표 + 외부 감사 24시간 공개. 신뢰성이 차별점.</p></div>
+    </div>
+    <p style="margin-top:var(--s3)"><em>※ 프로그램 전체 구성·회차·연출 상세는 별도 〈MADE 100 프로그램 기획서〉 참조.</em></p>
+  </div>
+</section>
+
+<section id="ko-s3">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><path d="M4 10.5 8.5 15 16 5.5"/></svg></span>
+      <span class="sec-num">03</span><h2 class="display">왜 〈MADE 100〉이 TikTok에 "딱"인가</h2>
+    </div>
+    <p class="lead">방송 협찬은 보통 일방향입니다 — 방송사가 콘텐츠를 만들고, 플랫폼은 사후 마케팅 채널이 됩니다. 〈MADE 100〉은 정반대입니다. 이 프로그램은 TikTok을 위해, TikTok의 문법으로 설계됐습니다.</p>
+    <h3>① TikTok 본사 전략과 100% 정렬</h3>
+    <p>TikTok이 일관되게 추진해 온 방향은 명확합니다 — <strong>"플랫폼에서 → 자체 IP로, 광고에서 → 운영 파트너로, 단발에서 → 시리즈로."</strong> Branded Hashtag Challenge로 검증된 참여형 광고, SoundOn으로 음악 가치사슬 진입, TikTok LIVE로 라이브 엔터테인먼트 확장. 〈MADE 100〉은 이 세 가지를 <strong>'AI 아이돌 오디션'이라는 단일 IP로 결합</strong>합니다. TikTok에게 새로운 모험이 아니라, 이미 검증한 패턴의 다음 단계입니다.</p>
+    <h3>② TikTok 사용자가 곧 출연자이자 시청자</h3>
+    <p>AI 도구로 콘텐츠를 만드는 크리에이터, AI 음악·버추얼 아이돌을 소비하는 13~29세 글로벌 Z세대 — 이들은 이미 TikTok의 정중앙 사용자입니다. #aimusic·#virtualidol·#aigenerated 해시태그는 TikTok에서 가장 빠르게 자라는 카테고리 중 하나입니다. 〈MADE 100〉의 응모자도, 시청자도, 챌린지 참여자도 — <strong>전부 TikTok 사용자 풀과 겹칩니다.</strong> 새 사용자를 데려오는 게 아니라, 가진 사용자를 가장 효율적으로 깨우는 IP입니다.</p>
+    <h3>③ 세계에 비어 있는 단 한 자리</h3>
+    <p>AI 음악 콘테스트는 음악만, 버추얼 아이돌은 뒤에 사람이 있고, 회사 단독 AI 아이돌은 공모도 오디션도 아닙니다. <strong>AI 가창 + AI 비주얼 + AI 페르소나 + 데뷔조 선발 방송</strong>을 결합한 사례는 세계 0건입니다. 카테고리를 처음 정의한 자가 그 카테고리를 영원히 소유합니다 — "AI Idol Audition"이 앞으로 오랫동안 글로벌 검색에서 TikTok의 이름과 함께 등장하게 됩니다.</p>
+    <h3>④ 짧고 충격적인 장면이 12주 내내</h3>
+    <p>즉석 신곡, 실시간 영상통화, AI의 비포·애프터 진화, 9위→1위 발표 — 〈MADE 100〉은 매주 <strong>15~60초로 잘라 TikTok에 올리기 딱 좋은 장면</strong>을 구조적으로 생산합니다. "AI가 이걸 어떻게?"라는 반응은 곧 듀엣·챌린지·공유로 이어집니다. 콘텐츠가 모자라는 게 아니라, 넘칩니다.</p>
+    <div class="callout gold"><p>〈MADE 100〉은 TikTok에 "올리면 좋은" 프로그램이 아닙니다. <strong>TikTok에서만 완성되는</strong> 프로그램입니다.</p></div>
+  </div>
+</section>
+
+<section id="ko-s4">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="2.5" y="5.5" width="11" height="9" rx="1.5"/><path d="M13.5 8.5 17.5 6v8l-4-2.5Z"/></svg></span>
+      <span class="sec-num">04</span><h2 class="display">TikTok = 쇼 그 자체</h2>
+    </div>
+    <p>〈MADE 100〉에서 TikTok은 방송을 홍보하는 채널이 아닙니다. <strong>프로그램의 작동 원리 자체가 TikTok 위에 있습니다.</strong></p>
+    <div class="grid grid-2">
+      <div class="card"><h4>매 회차 = 챌린지 1개</h4><p>시청자가 직접 영상을 만들어 참여. 챌린지 영상 데이터가 곧 콘텐츠이자 시청자 투표의 일부.</p></div>
+      <div class="card"><h4>후보 100인 = 100개 공식 계정</h4><p>본선 진출 즉시 100명의 AI 아이돌이 TikTok 공식 계정 개설. 매주 비하인드·LIVE.</p></div>
+      <div class="card"><h4>매주 TikTok LIVE</h4><p>메인 LIVE + 후보 1:1 LIVE + 발표식 글로벌 동시 송출. 8화 실시간 팬 영상통화의 무대.</p></div>
+      <div class="card"><h4>시청자 투표 50% = TikTok 데이터</h4><p>좋아요·재생·듀엣·LIVE 시청 시간이 투표 점수로 환산. 시청 = 곧 투표.</p></div>
+    </div>
+    <div class="callout"><p>TikTok이 빠지면 〈MADE 100〉은 작동하지 않습니다. 그래서 TikTok은 협찬사가 아니라 <strong>공동 운영 파트너</strong>로 격상됩니다 — K-POP 차세대 포맷의 공동 제작자로.</p></div>
+  </div>
+</section>
+
+<section id="ko-s5">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="11" y="3" width="6" height="6" rx="1"/><rect x="3" y="11" width="6" height="6" rx="1"/><rect x="11" y="11" width="6" height="6" rx="1"/></svg></span>
+      <span class="sec-num">05</span><h2 class="display">TikTok 협업 4축</h2>
+    </div>
+    <p>TikTok이 이미 운영 중인 자산을 그대로 활용합니다. 새로 만들 것이 거의 없습니다 — 검증된 패턴을 AI 아이돌 카테고리에 얹는 구조입니다.</p>
+    <div class="axis">
+      <div class="axis-head"><span class="axis-no">01</span><span class="axis-title">Branded Hashtag Challenge — 시즌 운영 엔진</span></div>
+      <p>메인 해시태그 <strong>#MADE100</strong>을 응모 단계부터 데뷔 후까지 운영. 12주 동안 회차별 챌린지 12개 + 콘셉트 유닛 챌린지 6개 + 데뷔 챌린지 = 총 19개 이상의 챌린지 자산. TopView 첫 화면 노출(시즌 시작·발표식·데뷔 핵심 시점), 챌린지별 AR 필터, 인플루언서·후보 시드 영상까지 풀 패키지.</p>
+      <p style="margin-bottom:0"><strong>TikTok 노출:</strong> 매 회차·매 챌린지에 "TikTok presents" 자동 노출. 단발 광고가 아니라 12주 내내 브랜드가 쇼와 함께 호흡.</p>
+    </div>
+    <div class="axis">
+      <div class="axis-head"><span class="axis-no">02</span><span class="axis-title">SoundOn — 글로벌 음원 발매</span></div>
+      <p>시즌 음원 — 주제가 1곡 + 콘셉트 유닛 6곡 + THE NINE 데뷔곡 = 총 8곡 — 을 <strong>TikTok SoundOn으로 글로벌 동시 발매</strong>. 최종회 LIVE 무대 위에서 데뷔곡 공개 → SoundOn 즉시 글로벌 유통 → 한·영·일 다국어 동시 발매. SoundOn 라이브러리에 누적되는 음악 자산이자, SoundOn 플랫폼의 메이저 차트 진입 케이스가 됩니다.</p>
+    </div>
+    <div class="axis">
+      <div class="axis-head"><span class="axis-no">03</span><span class="axis-title">TikTok LIVE — 데뷔 무대의 글로벌 송출</span></div>
+      <p>매주 메인 LIVE·후보 1:1 LIVE·발표식 LIVE가 시즌 내내 TikTok LIVE에서 진행. 최종회 THE NINE 데뷔 무대 + 메타버스 콘서트는 <strong>TikTok LIVE 글로벌 동시 송출</strong> — 가상 좌석·디지털 굿즈·실시간 채팅까지 TikTok LIVE 기능을 그대로 활용. 데뷔 무대가 곧 TikTok LIVE의 미래 형태를 보여주는 쇼케이스입니다.</p>
+    </div>
+    <div class="axis">
+      <div class="axis-head"><span class="axis-no">04</span><span class="axis-title">시리즈 파트너십 — 시즌을 거듭하며 함께</span></div>
+      <p>〈MADE 100〉은 단발 시즌이 아닙니다. 시즌 1(보이그룹 THE NINE) → 시즌 2(걸그룹 옵션) → 그 이후로 이어질 수 있는 <strong>시리즈 IP</strong>입니다. 시즌이 쌓일수록 데뷔조·AI 아이돌·AI MC가 자산으로 누적됩니다. TikTok은 시즌 1의 성과를 보고 다음 시즌으로 파트너십을 이어갈 수 있습니다 — <strong>협업의 범위와 기간은 양사가 함께 협의해 정합니다.</strong></p>
+    </div>
+    <div class="callout"><p>구체적 패키지·규모는 TikTok Korea와의 미팅에서 협의합니다. 본 제안서는 — "함께 만들 수 있는 그림"을 먼저 보여드리는 자료입니다.</p></div>
+  </div>
+</section>
+
+<section id="ko-s6">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><circle cx="7" cy="7" r="2.7"/><circle cx="13.5" cy="8" r="2.3"/><path d="M2.5 16c0-3.2 9-3.2 9 0"/><path d="M11.5 15c.4-2.6 7-2.6 6.8.4"/></svg></span>
+      <span class="sec-num">06</span><h2 class="display">시너지 — 누가 무엇을 얻나</h2>
+    </div>
+    <p class="lead">좋은 파트너십은 한쪽이 비용을 내고 한쪽이 노출을 받는 거래가 아닙니다. 〈MADE 100〉 × TikTok은 양쪽이 동시에 자산을 쌓는 구조입니다.</p>
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="tag">TikTok이 얻는 것</div>
+        <ul class="clean" style="margin-top:var(--s2)">
+          <li><strong>새 카테고리 영구 소유</strong> — "AI 아이돌 오디션 = TikTok" 등식</li>
+          <li><strong>자체 음악 IP 확장</strong> — SoundOn·LIVE를 잇는 진짜 IP 자산</li>
+          <li><strong>광고주 신규 카테고리</strong> — AI·뷰티·패션·테크 브랜드의 AI 아이돌 협업 수요를 TikTok For Business로 흡수</li>
+          <li><strong>글로벌 도달 + 사용자 활성화</strong> — 100개국, TikTok LIVE·SoundOn 신규 유입</li>
+          <li><strong>사용자 생산 콘텐츠 자산</strong> — 챌린지 영상이 곧 TikTok 콘텐츠로 누적</li>
+          <li><strong>시리즈 파트너십</strong> — 시즌이 쌓일수록 커지는 IP 가치 (범위·기간은 협의)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="tag">〈MADE 100〉이 얻는 것</div>
+        <ul class="clean" style="margin-top:var(--s2)">
+          <li><strong>처음부터 글로벌</strong> — 방송은 한국, TikTok은 100개국</li>
+          <li><strong>운영 인프라</strong> — 챌린지·계정·LIVE·투표를 TikTok 위에서</li>
+          <li><strong>음원 글로벌 유통</strong> — SoundOn 동시 발매</li>
+          <li><strong>데뷔 즉시 팬덤</strong> — 12주간 형성된 글로벌 팬이 데뷔조로 전환</li>
+          <li><strong>시리즈 IP 자산화</strong> — 데뷔조·AI MC가 영구 자산</li>
+          <li><strong>신뢰도</strong> — 글로벌 플랫폼 파트너십이 곧 프로그램 공신력</li>
+        </ul>
+      </div>
+    </div>
+    <h3>양측 공동 가치</h3>
+    <div class="grid grid-3">
+      <div class="card"><h4>카테고리를 함께 정의</h4><p>K-POP의 AI 시대 첫 협업 사례. 후발 주자는 모두 이 등식 안에서 경쟁하게 됩니다.</p></div>
+      <div class="card"><h4>미디어 헤드라인 동시 확보</h4><p>"세계 최초 AI 아이돌 오디션" — 글로벌 매체 보도에 양사 이름이 함께 등장.</p></div>
+      <div class="card"><h4>시즌 누적 매출</h4><p>시즌·음원·콘서트·라이센싱·광고가 시즌마다 누적. 단발이 아닌 곡선.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="ko-s7">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="13" rx="1.5"/><line x1="3" y1="8" x2="17" y2="8"/><line x1="7" y1="2.5" x2="7" y2="5.5"/><line x1="13" y1="2.5" x2="13" y2="5.5"/></svg></span>
+      <span class="sec-num">07</span><h2 class="display">12주 운영 — 챌린지·글로벌</h2>
+    </div>
+    <h3>12주 챌린지 로드맵</h3>
+    <p>매 회차마다 챌린지 1개. 응모 단계부터 데뷔까지 누적 <strong>10만 개 이상의 챌린지 영상</strong>을 목표로 합니다.</p>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>구간</th><th>챌린지</th><th>형식</th></tr></thead>
+      <tbody>
+        <tr><td>응모</td><td>#MADE100</td><td>크리에이터가 자신의 AI 아이돌 응모 영상</td></tr>
+        <tr><td>1~3화 (도입)</td><td>#FirstSpark · 주제가 듀엣 · 1:1 배틀 응원</td><td>후보 응원·따라하기</td></tr>
+        <tr><td>4~7화 (경쟁)</td><td>포지션 챌린지 · 콘셉트 유닛 6종 챌린지</td><td>유닛별 신곡 챌린지</td></tr>
+        <tr><td>8~10화 (위기)</td><td>#ChatWithAI 실시간 영상통화 클립 · 자작곡 응원</td><td>AI 인터랙션 캡처</td></tr>
+        <tr><td>11~12화 (데뷔)</td><td>#TheNineDebut — 데뷔 축하·메타버스 콘서트 클립</td><td>글로벌 데뷔 챌린지</td></tr>
+      </tbody>
+    </table></div>
+    <h3>글로벌 5개국어 동시 운영</h3>
+    <p>모든 콘텐츠는 한·영·일·중·스페인어로 동시 운영됩니다. 시차 없이, 24시간 안에 다국어 자막이 공개됩니다. AI 자동 번역 + 케이팝 전문 번역가 감수의 2단 구조 — TikTok이 강세인 일본·동남아·라틴 시장을 처음부터 정조준합니다.</p>
+    <h3>후보 100인 계정 — TikTok 콘텐츠 공장</h3>
+    <p>본선 진출 즉시 100명의 AI 아이돌이 TikTok 공식 계정을 개설합니다. 12주 동안 100개 계정이 매주 비하인드·LIVE·챌린지를 쏟아내고, 합산 팔로워 1,000만 명을 목표로 합니다. 시즌이 끝나면 계정 권한은 크리에이터 본인에게 이전됩니다 — TikTok 생태계에 영구히 남는 100명의 새 크리에이터.</p>
+    <div class="callout"><p>TikTok이 협찬할수록 TikTok의 자산(콘텐츠·계정·사용자·데이터)이 늘어납니다. 일반 협찬과 근본적으로 다른 구조입니다.</p></div>
+  </div>
+</section>
+
+<section id="ko-s8">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><polyline points="3,15 8,9.5 12,12.5 17,5"/><polyline points="12.5,5 17,5 17,9.5"/></svg></span>
+      <span class="sec-num">08</span><h2 class="display">시장 검증 — 의심하지 않아도 되는 이유</h2>
+    </div>
+    <p class="lead">AI·버추얼 아이돌 시장의 회의론은 끝났습니다. 음원·콘서트·차트·광고·라이센싱 — 모든 수익 영역에서 이미 검증이 끝났습니다.</p>
+    <div class="grid grid-3">
+      <div class="card"><div class="kpi">₩45억</div><div class="kpi-label">플레이브 2024 매출 · 고척돔 매진 · 빌보드 글로벌 200 진입</div></div>
+      <div class="card"><div class="kpi">¥43.4B</div><div class="kpi-label">홀로라이브 FY25 매출 · 영업이익률 38%</div></div>
+      <div class="card"><div class="kpi">세계 최초</div><div class="kpi-label">AI 아이돌이 직접 데뷔하는 오디션</div></div>
+    </div>
+    <h3>TikTok이 협찬해 성공한 패턴 — 그대로 적용됩니다</h3>
+    <div class="grid grid-2">
+      <div class="card"><h4>Netflix 〈Physical: 100〉</h4><p>TikTok 챌린지로 80개국 이상 글로벌 #1. 시청자 참여형 챌린지가 도달의 핵심 엔진 — 〈MADE 100〉과 전략 일치.</p></div>
+      <div class="card"><h4>MrBeast 〈Beast Games〉</h4><p>TikTok-first 마케팅으로 글로벌 5,000만 시청자. 단발 협찬이 아닌 IP 운영 파트너십 모델 — 우리와 가장 가까운 구조.</p></div>
+      <div class="card"><h4>Eurovision × TikTok</h4><p>공식 파트너십으로 Z세대 참여 큰 폭 증가. 글로벌 음악 콘테스트 + TikTok = 검증된 조합.</p></div>
+      <div class="card"><h4>TikTok 음악 발굴 IP</h4><p>TikTok이 직접 운영해 온 글로벌 음악 경연 IP의 — AI 아이돌 시대 버전. 본사가 가장 쉽게 이해할 선례.</p></div>
+    </div>
+    <p style="margin-top:var(--s3)">TikTok에서 AI 음악은 이미 폭발 중입니다. AI 곡이 빌보드 차트에 진입하고, AI 커버송은 일반 커버 대비 몇 배 높은 참여율을 보입니다. <strong>사용자 풀과 콘텐츠 트렌드가 이미 "AI 아이돌"을 향해 형성돼 있습니다</strong> — 〈MADE 100〉은 그 흐름을 단일 IP로 집결시킵니다.</p>
+  </div>
+</section>
+
+<section id="ko-s9">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.5"/><line x1="2.5" y1="10" x2="17.5" y2="10"/><path d="M10 2.5a11 11 0 0 1 0 15 11 11 0 0 1 0-15Z"/></svg></span>
+      <span class="sec-num">09</span><h2 class="display">글로벌 도달 · 기대 성과</h2>
+    </div>
+    <p>한국 방송 협찬은 시청률 = 한국 중심입니다. 〈MADE 100〉은 시즌 1부터 <strong>100개국 동시</strong>를 목표로 합니다 — TikTok이 가장 잘하는 일입니다.</p>
+    <h3>시즌 1 목표</h3>
+    <div class="grid grid-4">
+      <div class="card"><div class="kpi">100+</div><div class="kpi-label">시청 국가</div></div>
+      <div class="card"><div class="kpi">1,000+</div><div class="kpi-label">글로벌 응모 팀</div></div>
+      <div class="card"><div class="kpi">10만+</div><div class="kpi-label">챌린지 영상 누적</div></div>
+      <div class="card"><div class="kpi">5,000만</div><div class="kpi-label">글로벌 투표 누적</div></div>
+      <div class="card"><div class="kpi">1,000만+</div><div class="kpi-label">후보 100인 합산 팔로워</div></div>
+      <div class="card"><div class="kpi">8곡</div><div class="kpi-label">SoundOn 발매 음원</div></div>
+      <div class="card"><div class="kpi">10억+</div><div class="kpi-label">12주 누적 임프레션</div></div>
+      <div class="card"><div class="kpi">빌보드</div><div class="kpi-label">데뷔곡 글로벌 차트 진입 목표</div></div>
+    </div>
+    <h3>TikTok이 강한 시장을 정조준</h3>
+    <p>응모자·시청자의 상당 비중이 <strong>일본·동남아·라틴</strong>에서 나올 것으로 예상됩니다 — 전부 TikTok이 강세인 시장입니다. 이 지역에서 〈MADE 100〉은 TikTok 사용자 활성화와 K-POP 콘텐츠 점유 확장을 동시에 달성합니다.</p>
+    <div class="callout gold"><p>〈MADE 100〉은 글로벌 미디어 헤드라인이 보장된 IP입니다 — "세계 최초 AI 아이돌 오디션". 협업 자체가 양사에 큰 PR 가치를 만듭니다.</p></div>
+  </div>
+</section>
+
+<section id="ko-s10">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="2.5" y="4" width="15" height="13" rx="1.5"/><line x1="2.5" y1="8" x2="17.5" y2="8"/><line x1="6.5" y1="2.5" x2="6.5" y2="5.5"/><line x1="13.5" y1="2.5" x2="13.5" y2="5.5"/></svg></span>
+      <span class="sec-num">10</span><h2 class="display">일정 · 다음 단계</h2>
+    </div>
+    <div class="tbl-wrap"><table>
+      <tbody>
+        <tr><td><strong>파트너십 미팅</strong></td><td>본 제안서 발표 · 데모 영상 · 핵심 팀 참석</td></tr>
+        <tr><td>협업 범위 협의</td><td>4축(Branded Hashtag·SoundOn·LIVE·시리즈) 전체 또는 단계별</td></tr>
+        <tr><td>공모전 오픈</td><td>2026년 여름 — #MADE100 챌린지 런칭</td></tr>
+        <tr><td>본선 100인 발표</td><td>2026년 9월 — 후보 100개 TikTok 계정 일제 개설</td></tr>
+        <tr><td><strong>본방송 (12부작)</strong></td><td><strong>2026년 10월 ~ 12월</strong> — 방송 + TikTok 글로벌 동시</td></tr>
+        <tr><td><strong>THE NINE 데뷔</strong></td><td><strong>2026년 12월</strong> — TikTok LIVE 글로벌 송출 · SoundOn 동시 발매</td></tr>
+      </tbody>
+    </table></div>
+    <h3>지금 시작하는 법</h3>
+    <p>TikTok Korea 마케팅·파트너십 팀과의 미팅을 제안드립니다. 본 제안서와 함께 프로그램 기획서 풀버전·데모 자료를 준비했습니다. 협업 범위는 4축 전체로도, 단계별로도 시작할 수 있습니다 — TikTok의 결정에 맞춰 유연하게 설계 가능합니다.</p>
+  </div>
+</section>
+
+<section id="ko-s11">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="4" y="3.5" width="12" height="14" rx="1"/><line x1="7" y1="7" x2="9" y2="7"/><line x1="11" y1="7" x2="13" y2="7"/><line x1="7" y1="10.5" x2="9" y2="10.5"/><line x1="11" y1="10.5" x2="13" y2="10.5"/><line x1="8.5" y1="17.5" x2="8.5" y2="14"/><line x1="11.5" y1="17.5" x2="11.5" y2="14"/></svg></span>
+      <span class="sec-num">11</span><h2 class="display">제작사 소개</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+        <h4>(주)써니엔터테인먼트</h4>
+        <p>엔터테인먼트와 첨단 기술을 융합하는 <strong>엔터테크 전문 기획사</strong>. 콘텐츠·AI·디자인·기술·법무 전 영역을 12명의 전문 AI 에이전트 시스템으로 운영합니다. 〈MADE 100〉의 AI 아이돌 제작 가이드·AI MC·글로벌 TikTok 운영을 인하우스 역량으로 직접 수행합니다.</p>
+      </div>
+      <div class="card">
+        <h4>스타로드이엔엠</h4>
+        <p><strong>방송 제작 경험이 풍부하고, 글로벌 공연 제작 경험을 두루 보유한</strong> 전문 프로덕션입니다. 음악 방송과 라이브 무대 양쪽의 제작 노하우를 갖춘 방송 제작 파트너입니다.</p>
+      </div>
+    </div>
+    <p style="margin-top:var(--s3)"><strong>역할 분담</strong> — 써니엔터테인먼트 = 기획·AI 제작·AI MC·TikTok 글로벌 운영·디자인 / 스타로드이엔엠 = 방송 제작·편성·음악 방송 실무. AI 엔터테크 기획력과 방송 제작 역량을 결합한 공동 제작 체제입니다.</p>
+  </div>
+</section>
+
+<footer>
+  <svg class="hero-bg" viewBox="0 0 1440 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="1440" height="420" fill="url(#heroDots)" />
+  </svg>
+  <div class="wrap" id="ko-s12">
+    <div class="mono">MADE 100 × TikTok &nbsp;/&nbsp; 글로벌 파트너십 제안서 &nbsp;/&nbsp; 2026</div>
+    <h2 class="display" style="margin: var(--s3) 0;">AI 아이돌의 시대가 시작됩니다.<br/>그 첫 무대는, <span style="color:var(--tiktok)">TikTok입니다.</span></h2>
+    <p style="color: oklch(78% 0.02 255); max-width: 60ch;">TikTok이 이미 검증한 글로벌 음악 IP 플레이북의 — AI 아이돌 시대 확장. 카테고리를 함께 정의하고, 시즌을 거듭하며 함께 키워가는 전략적 동맹을 제안합니다. 같이 만들어 주세요.</p>
+    <div class="pill-row" style="margin-top: var(--s4);">
+      <span class="pill">(주)써니엔터테인먼트 × 스타로드이엔엠</span>
+      <span class="pill">CONTACT — nextsunny@gmail.com</span>
+    </div>
+  </div>
+</footer>
+</div><!-- /KO -->
+
+<!-- ============================================================ -->
+<!-- ===================== ENGLISH ============================== -->
+<!-- ============================================================ -->
+<div class="doc" data-lang="en">
+<header class="hero">
+  <svg class="hero-bg" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <pattern id="heroDots" width="38" height="38" patternUnits="userSpaceOnUse"><circle cx="19" cy="19" r="1.5" fill="#FFFFFF" fill-opacity="0.05" /></pattern>
+      <radialGradient id="heroGlow" cx="80%" cy="20%" r="58%"><stop offset="0%" stop-color="#2BBFD0" stop-opacity="0.26" /><stop offset="100%" stop-color="#2BBFD0" stop-opacity="0" /></radialGradient>
+    </defs>
+    <rect width="1440" height="760" fill="url(#heroDots)" /><rect width="1440" height="760" fill="url(#heroGlow)" />
+  </svg>
+  <div class="wrap">
+    <div class="brand">
+      <svg class="logomark" viewBox="0 0 48 48" aria-label="MADE 100 logo">
+        <rect width="48" height="48" rx="11" fill="#1C1C34" stroke="#33335A" stroke-width="1" />
+        <g fill="#5B6BD8" fill-opacity="0.55"><circle cx="9" cy="9" r="1.7"/><circle cx="24" cy="7" r="1.7"/><circle cx="39" cy="9" r="1.7"/><circle cx="7" cy="24" r="1.7"/><circle cx="41" cy="24" r="1.7"/><circle cx="9" cy="39" r="1.7"/><circle cx="24" cy="41" r="1.7"/><circle cx="39" cy="39" r="1.7"/></g>
+        <g fill="#E6B84A"><circle cx="16" cy="16" r="2.9"/><circle cx="24" cy="16" r="2.9"/><circle cx="32" cy="16" r="2.9"/><circle cx="16" cy="24" r="2.9"/><circle cx="24" cy="24" r="2.9"/><circle cx="32" cy="24" r="2.9"/><circle cx="16" cy="32" r="2.9"/><circle cx="24" cy="32" r="2.9"/><circle cx="32" cy="32" r="2.9"/></g>
+      </svg>
+      <div class="brand-tx">MADE 100<small>Global AI Idol Audition</small></div>
+    </div>
+    <div class="mono">Global Partnership Proposal &nbsp;/&nbsp; SUNNY ENT. × STARROAD ENM &nbsp;/&nbsp; 2026</div>
+    <h1 class="display">MADE 100 <span class="x">×</span> TikTok</h1>
+    <div class="tagline">100 AI idols created by the world.<br/>TikTok debuts nine of them.</div>
+    <p class="sub">〈MADE 100〉 does not work without TikTok. The challenges, the contestant accounts, the LIVEs, the audience vote — all of it happens on TikTok. For TikTok, this is not a post-broadcast marketing channel. It is the show itself.</p>
+    <div class="hero-meta">
+      <span class="badge">World's First AI Idol Debut Audition</span>
+      <span class="badge">12 Episodes · October 2026</span>
+      <span class="badge">100+ Countries Targeted</span>
+      <span class="badge">Debut Group — THE NINE</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><line x1="4" y1="5" x2="16" y2="5"/><line x1="4" y1="10" x2="16" y2="10"/><line x1="4" y1="15" x2="11" y2="15"/></svg></span><span class="sec-num">00</span><h2 class="display">Contents</h2></div>
+    <nav class="toc">
+      <a href="#en-s1"><span class="n">01</span><span>Executive Summary</span></a>
+      <a href="#en-s2"><span class="n">02</span><span>The Program — MADE 100</span></a>
+      <a href="#en-s3"><span class="n">03</span><span>Why It Fits TikTok</span></a>
+      <a href="#en-s4"><span class="n">04</span><span>TikTok Is the Show</span></a>
+      <a href="#en-s5"><span class="n">05</span><span>Four Axes of Collaboration</span></a>
+      <a href="#en-s6"><span class="n">06</span><span>Synergy — Who Gains What</span></a>
+      <a href="#en-s7"><span class="n">07</span><span>12-Week Operations</span></a>
+      <a href="#en-s8"><span class="n">08</span><span>Market Validation</span></a>
+      <a href="#en-s9"><span class="n">09</span><span>Global Reach &amp; Targets</span></a>
+      <a href="#en-s10"><span class="n">10</span><span>Timeline &amp; Next Steps</span></a>
+      <a href="#en-s11"><span class="n">11</span><span>The Production Companies</span></a>
+      <a href="#en-s12"><span class="n">12</span><span>Let's Build It Together</span></a>
+    </nav>
+  </div>
+</section>
+
+<section id="en-s1">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="4" y="3" width="12" height="14" rx="1.5"/><line x1="7" y1="7" x2="13" y2="7"/><line x1="7" y1="10" x2="13" y2="10"/><line x1="7" y1="13" x2="11" y2="13"/></svg></span><span class="sec-num">01</span><h2 class="display">Executive Summary</h2></div>
+    <p class="lead">〈MADE 100〉 — the world's first global AI idol debut audition, in which 100 AI idols created by creators around the world compete, and viewers themselves debut a nine-member group, THE NINE. And the stage for this show is TikTok.</p>
+    <p>It is a 12-episode broadcast program co-produced by SUNNY Entertainment and STARROAD ENM (a broadcast and global-performance production house), targeting an October 2026 premiere. Television carries it in Korea — but <strong>the place where this program truly comes alive is TikTok.</strong></p>
+    <h3>What we propose to TikTok</h3>
+    <p>This is not a one-off advertising sponsorship. It is a <strong>strategic partnership</strong> that extends the global music IP playbook TikTok has already proven — <strong>Branded Hashtag Challenge, SoundOn, and TikTok LIVE</strong> — into a brand-new category: the AI idol debut audition.</p>
+    <div class="grid grid-3">
+      <div class="card"><div class="tag">Proposal 1</div><h4>The Engine of the Show</h4><p>12 weeks of challenges, contestant accounts, LIVEs, and 50% of the vote — all run on TikTok. TikTok is the program's operating infrastructure.</p></div>
+      <div class="card"><div class="tag">Proposal 2</div><h4>Music &amp; Concert</h4><p>THE NINE's debut single released simultaneously via TikTok; the debut metaverse concert streamed globally on TikTok LIVE.</p></div>
+      <div class="card"><div class="tag">Proposal 3</div><h4>Owning the Category</h4><p>Be the first in the world to own the equation "AI idol audition = TikTok." Expandable into a multi-season series.</p></div>
+    </div>
+    <div class="callout"><p>"TikTok isn't our promotion. TikTok <em>is</em> the show."</p></div>
+  </div>
+</section>
+
+<section id="en-s2">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><path d="M10 2.5 12 7.5 17 9.5 12 11.5 10 16.5 8 11.5 3 9.5 8 7.5Z"/></svg></span><span class="sec-num">02</span><h2 class="display">The Program — MADE 100</h2></div>
+    <p>100 idols — <strong>each one built 100% by AI</strong> — created by AI creators around the world advance to the main competition. Over 12 weeks of survival rounds, they are narrowed down by a 50% jury score (a star jury panel plus active virtual artists) and a 50% global audience vote, until nine debut — the nine-member global boy group <strong>THE NINE</strong>.</p>
+    <div class="funnel"><span class="stage">1,000+ teams</span><span class="arrow">→</span><span class="stage">100</span><span class="arrow">→</span><span class="stage">50</span><span class="arrow">→</span><span class="stage">30</span><span class="arrow">→</span><span class="stage">18</span><span class="arrow">→</span><span class="stage">11</span><span class="arrow">→</span><span class="stage gold">THE NINE</span></div>
+    <h3>The core concept — a show "only AI can do"</h3>
+    <p>Vocals, dance, head-to-head battles — human auditions have those too. The hook of 〈MADE 100〉 is the mission that makes viewers ask <strong>"how is the AI even doing this?"</strong> — <strong>instant songwriting</strong> that completes a new track in minutes from a viewer's keyword, and a <strong>real-time live video call</strong> in which an AI idol talks with a fan, unscripted, right there. These moments are short, astonishing — and made to explode on TikTok.</p>
+    <div class="grid grid-3">
+      <div class="card"><h4>A Triple-Layered Drama</h4><p>The AI idol's evolution + the story of the human creator behind it + the viewer's choice. Three axes of emotion at once.</p></div>
+      <div class="card"><h4>Zero-Risk Cast</h4><p>Contestants structurally free of school-violence, dating, or contract scandals. Active 24/7, multilingual at once.</p></div>
+      <div class="card"><h4>Zero-Manipulation Vote</h4><p>Blockchain-based voting plus an external audit published within 24 hours. Trust is the differentiator.</p></div>
+    </div>
+    <p style="margin-top:var(--s3)"><em>※ Full program structure, episode breakdown, and production detail — see the separate 〈MADE 100 Program Plan〉.</em></p>
+  </div>
+</section>
+
+<section id="en-s3">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><path d="M4 10.5 8.5 15 16 5.5"/></svg></span><span class="sec-num">03</span><h2 class="display">Why 〈MADE 100〉 Fits TikTok</h2></div>
+    <p class="lead">Broadcast sponsorship is usually one-directional — the network makes the content, and the platform becomes an after-the-fact marketing channel. 〈MADE 100〉 is the opposite. This program was designed for TikTok, in TikTok's grammar.</p>
+    <h3>① 100% aligned with TikTok's HQ strategy</h3>
+    <p>TikTok's consistent direction is clear — <strong>"from platform to owned IP, from advertising to operating partner, from one-off to series."</strong> Participation-driven advertising proven by the Branded Hashtag Challenge, an entry into the music value chain through SoundOn, an expansion into live entertainment through TikTok LIVE. 〈MADE 100〉 <strong>combines all three into a single IP</strong> — the AI idol audition. For TikTok this is not a new venture; it is the next step of an already-proven pattern.</p>
+    <h3>② TikTok's users are the contestants and the viewers</h3>
+    <p>The creators who build content with AI tools, and the global Gen Z aged 13–29 who consume AI music and virtual idols — they are already TikTok's core users. #aimusic, #virtualidol, and #aigenerated are among the fastest-growing categories on TikTok. The applicants, the viewers, and the challenge participants of 〈MADE 100〉 <strong>all overlap with TikTok's existing user pool.</strong> This IP doesn't bring in new users — it activates the ones TikTok already has, in the most efficient way possible.</p>
+    <h3>③ The one seat empty in the world</h3>
+    <p>AI music contests are music only; virtual idols have a human behind them; company-owned AI idols are neither open calls nor auditions. A format that combines <strong>AI vocals + AI visuals + AI persona + a debut-selection broadcast</strong> — there are zero cases of it worldwide. Whoever defines a category first owns it forever. "AI idol audition" will appear in global search alongside TikTok's name for years to come.</p>
+    <h3>④ Short, astonishing moments — every week, for 12 weeks</h3>
+    <p>Instant songwriting, real-time video calls, the before-and-after evolution of the AI, the reveal from ninth place to first — 〈MADE 100〉 <strong>structurally produces moments built to be cut into 15–60 seconds for TikTok.</strong> The "how is the AI doing this?" reaction leads straight into duets, challenges, and shares. There is no shortage of content — there is an overflow of it.</p>
+    <div class="callout gold"><p>〈MADE 100〉 is not a program that's "nice to post on TikTok." It is a program that is <strong>only completed on TikTok.</strong></p></div>
+  </div>
+</section>
+
+<section id="en-s4">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="2.5" y="5.5" width="11" height="9" rx="1.5"/><path d="M13.5 8.5 17.5 6v8l-4-2.5Z"/></svg></span><span class="sec-num">04</span><h2 class="display">TikTok Is the Show</h2></div>
+    <p>In 〈MADE 100〉, TikTok is not a channel that promotes the broadcast. <strong>The operating logic of the program itself sits on TikTok.</strong></p>
+    <div class="grid grid-2">
+      <div class="card"><h4>Every Episode = One Challenge</h4><p>Viewers create their own videos to take part. The challenge videos are both content and part of the audience vote.</p></div>
+      <div class="card"><h4>100 Contestants = 100 Official Accounts</h4><p>The moment they reach the main rounds, 100 AI idols open official TikTok accounts. Weekly behind-the-scenes and LIVEs.</p></div>
+      <div class="card"><h4>Weekly TikTok LIVE</h4><p>Main LIVEs, 1:1 contestant LIVEs, and result shows streamed globally. The stage for the Episode 8 real-time fan video calls.</p></div>
+      <div class="card"><h4>50% of the Vote = TikTok Data</h4><p>Likes, plays, duets, and LIVE watch time convert into voting scores. To watch is to vote.</p></div>
+    </div>
+    <div class="callout"><p>Without TikTok, 〈MADE 100〉 does not run. That is why TikTok is elevated from a sponsor to a <strong>co-operating partner</strong> — a co-creator of K-pop's next-generation format.</p></div>
+  </div>
+</section>
+
+<section id="en-s5">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="11" y="3" width="6" height="6" rx="1"/><rect x="3" y="11" width="6" height="6" rx="1"/><rect x="11" y="11" width="6" height="6" rx="1"/></svg></span><span class="sec-num">05</span><h2 class="display">Four Axes of Collaboration</h2></div>
+    <p>We use assets TikTok already operates. There is almost nothing new to build — the structure simply layers a proven pattern onto the AI idol category.</p>
+    <div class="axis"><div class="axis-head"><span class="axis-no">01</span><span class="axis-title">Branded Hashtag Challenge — the season's operating engine</span></div>
+      <p>The main hashtag <strong>#MADE100</strong> runs from the open call through to post-debut. Across 12 weeks: 12 episode challenges + 6 concept-unit challenges + a debut challenge = 19 or more challenge assets. A full package — TopView placement at key moments (season launch, result shows, debut), per-challenge AR effects, and influencer and contestant seed videos.</p>
+      <p style="margin-bottom:0"><strong>TikTok visibility:</strong> a "TikTok presents" credit on every episode and every challenge. Not a one-off ad — the brand breathes with the show for all 12 weeks.</p></div>
+    <div class="axis"><div class="axis-head"><span class="axis-no">02</span><span class="axis-title">SoundOn — global music release</span></div>
+      <p>The season's music — 1 theme song + 6 concept-unit songs + THE NINE's debut single = 8 tracks — released globally via <strong>TikTok SoundOn</strong>. The debut single drops on the LIVE stage of the finale → instant global distribution through SoundOn → simultaneous release in Korean, English, and Japanese. A music asset that accumulates in the SoundOn library — and a major chart entry case for the SoundOn platform.</p></div>
+    <div class="axis"><div class="axis-head"><span class="axis-no">03</span><span class="axis-title">TikTok LIVE — the debut stage, streamed worldwide</span></div>
+      <p>Weekly main LIVEs, 1:1 contestant LIVEs, and result shows run on TikTok LIVE throughout the season. The finale — THE NINE's debut stage plus a metaverse concert — streams globally and simultaneously on <strong>TikTok LIVE</strong>, using virtual seating, digital goods, and real-time chat. The debut stage becomes a showcase for the future form of TikTok LIVE.</p></div>
+    <div class="axis"><div class="axis-head"><span class="axis-no">04</span><span class="axis-title">Series Partnership — growing together, season by season</span></div>
+      <p>〈MADE 100〉 is not a single season. It is a <strong>series IP</strong> that can run from Season 1 (boy group THE NINE) → Season 2 (girl group option) → and beyond. As seasons accumulate, debut groups, AI idols, and the AI MC build up as assets. Having seen the results of Season 1, TikTok can carry the partnership into the next season — <strong>with the scope and duration of the collaboration decided together by both companies.</strong></p></div>
+    <div class="callout"><p>Specific package scope and scale to be discussed in a meeting with TikTok Korea. This proposal is the document that first shows the picture we can build together.</p></div>
+  </div>
+</section>
+
+<section id="en-s6">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><circle cx="7" cy="7" r="2.7"/><circle cx="13.5" cy="8" r="2.3"/><path d="M2.5 16c0-3.2 9-3.2 9 0"/><path d="M11.5 15c.4-2.6 7-2.6 6.8.4"/></svg></span><span class="sec-num">06</span><h2 class="display">Synergy — Who Gains What</h2></div>
+    <p class="lead">A good partnership is not a transaction where one side pays and the other receives exposure. 〈MADE 100〉 × TikTok is a structure where both sides build assets at the same time.</p>
+    <div class="grid grid-2">
+      <div class="card"><div class="tag">What TikTok Gains</div>
+        <ul class="clean" style="margin-top:var(--s2)">
+          <li><strong>Permanent ownership of a new category</strong> — the equation "AI idol audition = TikTok"</li>
+          <li><strong>Expansion of owned music IP</strong> — a real IP asset alongside SoundOn and LIVE</li>
+          <li><strong>A new advertiser category</strong> — absorbing AI, beauty, fashion, and tech brands' demand for AI idol collaborations into TikTok For Business</li>
+          <li><strong>Global reach + user activation</strong> — 100+ countries, new inflow to TikTok LIVE and SoundOn</li>
+          <li><strong>User-generated content as an asset</strong> — challenge videos accumulate as TikTok content</li>
+          <li><strong>A series partnership</strong> — IP value that grows as seasons accumulate (scope and term to be discussed)</li>
+        </ul></div>
+      <div class="card"><div class="tag">What 〈MADE 100〉 Gains</div>
+        <ul class="clean" style="margin-top:var(--s2)">
+          <li><strong>Global from day one</strong> — broadcast in Korea, TikTok in 100+ countries</li>
+          <li><strong>Operating infrastructure</strong> — challenges, accounts, LIVEs, and voting on TikTok</li>
+          <li><strong>Global music distribution</strong> — simultaneous release via SoundOn</li>
+          <li><strong>A fanbase the moment they debut</strong> — global fans built over 12 weeks convert to the debut group</li>
+          <li><strong>A series IP asset</strong> — the debut group and AI MC as permanent assets</li>
+          <li><strong>Credibility</strong> — a global platform partnership is itself the program's authority</li>
+        </ul></div>
+    </div>
+    <h3>Shared value for both sides</h3>
+    <div class="grid grid-3">
+      <div class="card"><h4>Defining the category together</h4><p>K-pop's first collaboration of the AI era. Every later entrant competes inside this equation.</p></div>
+      <div class="card"><h4>Media headlines for both</h4><p>"The world's first AI idol audition" — both names appear together in global press coverage.</p></div>
+      <div class="card"><h4>Revenue that compounds each season</h4><p>Seasons, music, concerts, licensing, and advertising accumulate each season. A curve, not a one-off.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="en-s7">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="13" rx="1.5"/><line x1="3" y1="8" x2="17" y2="8"/><line x1="7" y1="2.5" x2="7" y2="5.5"/><line x1="13" y1="2.5" x2="13" y2="5.5"/></svg></span><span class="sec-num">07</span><h2 class="display">12-Week Operations — Challenges &amp; Global</h2></div>
+    <h3>The 12-week challenge roadmap</h3>
+    <p>One challenge per episode. From the open call through to debut, the target is a cumulative <strong>100,000+ challenge videos.</strong></p>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Phase</th><th>Challenge</th><th>Format</th></tr></thead>
+      <tbody>
+        <tr><td>Open call</td><td>#MADE100</td><td>Creators submit their AI idol audition video</td></tr>
+        <tr><td>Ep. 1–3 (Setup)</td><td>#FirstSpark · theme-song duet · 1:1 battle cheer</td><td>Cheering for and mimicking contestants</td></tr>
+        <tr><td>Ep. 4–7 (Competition)</td><td>Position challenge · 6 concept-unit challenges</td><td>New-song challenges per unit</td></tr>
+        <tr><td>Ep. 8–10 (Crisis)</td><td>#ChatWithAI real-time video-call clips · self-written song cheer</td><td>Capturing AI interactions</td></tr>
+        <tr><td>Ep. 11–12 (Debut)</td><td>#TheNineDebut — debut celebration and metaverse concert clips</td><td>Global debut challenge</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Five-language global operation, simultaneously</h3>
+    <p>All content runs simultaneously in Korean, English, Japanese, Chinese, and Spanish. No time lag — multilingual subtitles published within 24 hours. A two-tier structure of AI translation plus K-pop specialist review — aiming directly, from the start, at the markets where TikTok is strongest: Japan, Southeast Asia, and Latin America.</p>
+    <h3>100 contestant accounts — a TikTok content factory</h3>
+    <p>The moment they reach the main rounds, 100 AI idols open official TikTok accounts. For 12 weeks, 100 accounts pour out weekly behind-the-scenes content, LIVEs, and challenges, targeting a combined 10 million followers. When the season ends, account ownership transfers to the creators themselves — 100 new creators left permanently in the TikTok ecosystem.</p>
+    <div class="callout"><p>The more TikTok backs this, the more TikTok's own assets — content, accounts, users, data — grow. A structure fundamentally different from ordinary sponsorship.</p></div>
+  </div>
+</section>
+
+<section id="en-s8">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><polyline points="3,15 8,9.5 12,12.5 17,5"/><polyline points="12.5,5 17,5 17,9.5"/></svg></span><span class="sec-num">08</span><h2 class="display">Market Validation — Why There's No Need to Doubt</h2></div>
+    <p class="lead">Skepticism about the AI / virtual idol market is over. Music, concerts, charts, advertising, licensing — every revenue area has already been validated.</p>
+    <div class="grid grid-3">
+      <div class="card"><div class="kpi">₩4.5B</div><div class="kpi-label">PLAVE 2024 revenue · sold-out Gocheok Dome · Billboard Global 200 entry</div></div>
+      <div class="card"><div class="kpi">¥43.4B</div><div class="kpi-label">Hololive FY25 revenue · 38% operating margin</div></div>
+      <div class="card"><div class="kpi">World First</div><div class="kpi-label">An audition where AI idols actually debut</div></div>
+    </div>
+    <h3>The pattern that has succeeded when TikTok backs it — applies directly here</h3>
+    <div class="grid grid-2">
+      <div class="card"><h4>Netflix 〈Physical: 100〉</h4><p>A TikTok challenge took it to #1 in 80+ countries. Participation-driven challenges as the core engine of reach — strategy aligned with 〈MADE 100〉.</p></div>
+      <div class="card"><h4>MrBeast 〈Beast Games〉</h4><p>A TikTok-first strategy reached 50M+ viewers globally. An IP operating-partnership model, not a one-off sponsorship — the structure closest to ours.</p></div>
+      <div class="card"><h4>Eurovision × TikTok</h4><p>An official partnership drove a sharp rise in Gen Z participation. A global music contest + TikTok = a proven combination.</p></div>
+      <div class="card"><h4>TikTok's music-discovery IP</h4><p>The AI idol-era version of the global music competition IP TikTok has run itself — the precedent HQ understands most easily.</p></div>
+    </div>
+    <p style="margin-top:var(--s3)">AI music is already exploding on TikTok. AI tracks enter the Billboard charts, and AI cover songs show engagement several times higher than ordinary covers. <strong>The user pool and the content trend are already forming around "AI idols"</strong> — 〈MADE 100〉 concentrates that current into a single IP.</p>
+  </div>
+</section>
+
+<section id="en-s9">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.5"/><line x1="2.5" y1="10" x2="17.5" y2="10"/><path d="M10 2.5a11 11 0 0 1 0 15 11 11 0 0 1 0-15Z"/></svg></span><span class="sec-num">09</span><h2 class="display">Global Reach &amp; Targets</h2></div>
+    <p>Korean broadcast sponsorship means ratings centered on Korea. 〈MADE 100〉 targets <strong>100+ countries simultaneously</strong> from Season 1 — exactly what TikTok does best.</p>
+    <h3>Season 1 targets</h3>
+    <div class="grid grid-4">
+      <div class="card"><div class="kpi">100+</div><div class="kpi-label">Countries reached</div></div>
+      <div class="card"><div class="kpi">1,000+</div><div class="kpi-label">Global submission teams</div></div>
+      <div class="card"><div class="kpi">100K+</div><div class="kpi-label">Cumulative challenge videos</div></div>
+      <div class="card"><div class="kpi">50M</div><div class="kpi-label">Cumulative global votes</div></div>
+      <div class="card"><div class="kpi">10M+</div><div class="kpi-label">Combined followers of 100 contestants</div></div>
+      <div class="card"><div class="kpi">8 tracks</div><div class="kpi-label">Released via SoundOn</div></div>
+      <div class="card"><div class="kpi">1B+</div><div class="kpi-label">Cumulative impressions over 12 weeks</div></div>
+      <div class="card"><div class="kpi">Billboard</div><div class="kpi-label">Debut single global chart entry — target</div></div>
+    </div>
+    <h3>Aimed straight at TikTok's strongest markets</h3>
+    <p>A significant share of applicants and viewers is expected from <strong>Japan, Southeast Asia, and Latin America</strong> — all markets where TikTok is strong. In these regions, 〈MADE 100〉 achieves TikTok user activation and an expansion of K-pop content share at the same time.</p>
+    <div class="callout gold"><p>〈MADE 100〉 is an IP with guaranteed global media headlines — "the world's first AI idol audition." The collaboration itself creates significant PR value for both companies.</p></div>
+  </div>
+</section>
+
+<section id="en-s10">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="2.5" y="4" width="15" height="13" rx="1.5"/><line x1="2.5" y1="8" x2="17.5" y2="8"/><line x1="6.5" y1="2.5" x2="6.5" y2="5.5"/><line x1="13.5" y1="2.5" x2="13.5" y2="5.5"/></svg></span><span class="sec-num">10</span><h2 class="display">Timeline &amp; Next Steps</h2></div>
+    <div class="tbl-wrap"><table>
+      <tbody>
+        <tr><td><strong>Partnership meeting</strong></td><td>Present this proposal · demo video · core team in attendance</td></tr>
+        <tr><td>Scope discussion</td><td>Four axes (Branded Hashtag · SoundOn · LIVE · Series) — in full or in stages</td></tr>
+        <tr><td>Open call launch</td><td>Summer 2026 — #MADE100 challenge launch</td></tr>
+        <tr><td>Main 100 announced</td><td>September 2026 — 100 contestant TikTok accounts open at once</td></tr>
+        <tr><td><strong>Broadcast (12 episodes)</strong></td><td><strong>October – December 2026</strong> — broadcast + TikTok, global and simultaneous</td></tr>
+        <tr><td><strong>THE NINE debut</strong></td><td><strong>December 2026</strong> — global stream on TikTok LIVE · simultaneous SoundOn release</td></tr>
+      </tbody>
+    </table></div>
+    <h3>How we start, now</h3>
+    <p>We propose a meeting with TikTok Korea's marketing and partnership team. Together with this proposal, we have prepared the full program plan and demo materials. The scope can begin with all four axes or in stages — it can be designed flexibly, to fit TikTok's decision.</p>
+  </div>
+</section>
+
+<section id="en-s11">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="4" y="3.5" width="12" height="14" rx="1"/><line x1="7" y1="7" x2="9" y2="7"/><line x1="11" y1="7" x2="13" y2="7"/><line x1="7" y1="10.5" x2="9" y2="10.5"/><line x1="11" y1="10.5" x2="13" y2="10.5"/><line x1="8.5" y1="17.5" x2="8.5" y2="14"/><line x1="11.5" y1="17.5" x2="11.5" y2="14"/></svg></span><span class="sec-num">11</span><h2 class="display">The Production Companies</h2></div>
+    <div class="grid grid-2">
+      <div class="card"><h4>SUNNY Entertainment</h4><p>An <strong>entertainment-tech production house</strong> fusing entertainment with cutting-edge technology. It operates content, AI, design, technology, and legal entirely through a 12-member specialist AI agent system. 〈MADE 100〉's AI idol production guide, AI MC, and global TikTok operation are all carried out with in-house capability.</p></div>
+      <div class="card"><h4>STARROAD ENM</h4><p>A production house with <strong>extensive broadcast experience and a strong track record in global live performances</strong>. A broadcast production partner skilled in both music broadcasting and live-stage production.</p></div>
+    </div>
+    <p style="margin-top:var(--s3)"><strong>Division of roles</strong> — SUNNY Entertainment: planning, AI production, AI MC, global TikTok operation, design / STARROAD ENM: broadcast production, scheduling, music-broadcast execution. A co-production structure that combines AI entertainment-tech planning with broadcast production capability.</p>
+  </div>
+</section>
+
+<footer>
+  <svg class="hero-bg" viewBox="0 0 1440 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="1440" height="420" fill="url(#heroDots)" /></svg>
+  <div class="wrap" id="en-s12">
+    <div class="mono">MADE 100 × TikTok &nbsp;/&nbsp; Global Partnership Proposal &nbsp;/&nbsp; 2026</div>
+    <h2 class="display" style="margin: var(--s3) 0;">The age of the AI idol begins.<br/>And its first stage is <span style="color:var(--tiktok)">TikTok.</span></h2>
+    <p style="color: oklch(78% 0.02 255); max-width: 62ch;">The AI idol-era extension of the global music IP playbook TikTok has already proven. We propose a strategic alliance — to define the category together, and to grow it together, season after season. Let's build it together.</p>
+    <div class="pill-row" style="margin-top: var(--s4);">
+      <span class="pill">SUNNY Entertainment × STARROAD ENM</span>
+      <span class="pill">CONTACT — nextsunny@gmail.com</span>
+    </div>
+  </div>
+</footer>
+</div><!-- /EN -->
+
+<!-- ============================================================ -->
+<!-- ===================== 中文 ================================= -->
+<!-- ============================================================ -->
+<div class="doc" data-lang="zh">
+<header class="hero">
+  <svg class="hero-bg" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="1440" height="760" fill="url(#heroDots)" /><rect width="1440" height="760" fill="url(#heroGlow)" />
+  </svg>
+  <div class="wrap">
+    <div class="brand">
+      <svg class="logomark" viewBox="0 0 48 48" aria-label="MADE 100 logo">
+        <rect width="48" height="48" rx="11" fill="#1C1C34" stroke="#33335A" stroke-width="1" />
+        <g fill="#5B6BD8" fill-opacity="0.55"><circle cx="9" cy="9" r="1.7"/><circle cx="24" cy="7" r="1.7"/><circle cx="39" cy="9" r="1.7"/><circle cx="7" cy="24" r="1.7"/><circle cx="41" cy="24" r="1.7"/><circle cx="9" cy="39" r="1.7"/><circle cx="24" cy="41" r="1.7"/><circle cx="39" cy="39" r="1.7"/></g>
+        <g fill="#E6B84A"><circle cx="16" cy="16" r="2.9"/><circle cx="24" cy="16" r="2.9"/><circle cx="32" cy="16" r="2.9"/><circle cx="16" cy="24" r="2.9"/><circle cx="24" cy="24" r="2.9"/><circle cx="32" cy="24" r="2.9"/><circle cx="16" cy="32" r="2.9"/><circle cx="24" cy="32" r="2.9"/><circle cx="32" cy="32" r="2.9"/></g>
+      </svg>
+      <div class="brand-tx">MADE 100<small>Global AI Idol Audition</small></div>
+    </div>
+    <div class="mono">全球合作提案 &nbsp;/&nbsp; SUNNY ENT. × STARROAD ENM &nbsp;/&nbsp; 2026</div>
+    <h1 class="display">MADE 100 <span class="x">×</span> TikTok</h1>
+    <div class="tagline">全世界共同打造的100位AI偶像。<br/>由TikTok让其中9人出道。</div>
+    <p class="sub">〈MADE 100〉离开TikTok便无法运转。挑战赛、选手账号、直播、观众投票——全部都在TikTok上发生。对TikTok而言，这并非节目播出后的营销渠道，而是节目本身。</p>
+    <div class="hero-meta">
+      <span class="badge">世界首个AI偶像出道选秀</span>
+      <span class="badge">12集 · 2026年10月</span>
+      <span class="badge">目标覆盖100+国家</span>
+      <span class="badge">出道组合 — THE NINE</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><line x1="4" y1="5" x2="16" y2="5"/><line x1="4" y1="10" x2="16" y2="10"/><line x1="4" y1="15" x2="11" y2="15"/></svg></span><span class="sec-num">00</span><h2 class="display">目录</h2></div>
+    <nav class="toc">
+      <a href="#zh-s1"><span class="n">01</span><span>提案摘要</span></a>
+      <a href="#zh-s2"><span class="n">02</span><span>节目 — MADE 100</span></a>
+      <a href="#zh-s3"><span class="n">03</span><span>为何与TikTok完美契合</span></a>
+      <a href="#zh-s4"><span class="n">04</span><span>TikTok即节目本身</span></a>
+      <a href="#zh-s5"><span class="n">05</span><span>四大合作支柱</span></a>
+      <a href="#zh-s6"><span class="n">06</span><span>协同效应 — 各自所得</span></a>
+      <a href="#zh-s7"><span class="n">07</span><span>12周运营</span></a>
+      <a href="#zh-s8"><span class="n">08</span><span>市场验证</span></a>
+      <a href="#zh-s9"><span class="n">09</span><span>全球覆盖与预期成果</span></a>
+      <a href="#zh-s10"><span class="n">10</span><span>时间表与下一步</span></a>
+      <a href="#zh-s11"><span class="n">11</span><span>制作公司介绍</span></a>
+      <a href="#zh-s12"><span class="n">12</span><span>携手共创</span></a>
+    </nav>
+  </div>
+</section>
+
+<section id="zh-s1">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="4" y="3" width="12" height="14" rx="1.5"/><line x1="7" y1="7" x2="13" y2="7"/><line x1="7" y1="10" x2="13" y2="10"/><line x1="7" y1="13" x2="11" y2="13"/></svg></span><span class="sec-num">01</span><h2 class="display">提案摘要</h2></div>
+    <p class="lead">〈MADE 100〉——世界首个全球AI偶像出道选秀。全球创作者打造的100位AI偶像同台竞争，由观众亲手让九人组合THE NINE出道。而这档节目的舞台，就是TikTok。</p>
+    <p>本节目由SUNNY娱乐（SUNNY Entertainment）与STARROAD ENM（电视与全球演出制作公司）联合制作，为12集电视节目，目标于2026年10月开播。电视端面向韩国观众——但<strong>这档节目真正鲜活运转的地方，是TikTok。</strong></p>
+    <h3>我们向TikTok提议的内容</h3>
+    <p>这并非一次性的广告赞助，而是一项<strong>战略合作</strong>——将TikTok已验证的全球音乐IP方法论——<strong>Branded Hashtag Challenge、SoundOn、TikTok LIVE</strong>——拓展至一个全新品类：AI偶像出道选秀。</p>
+    <div class="grid grid-3">
+      <div class="card"><div class="tag">提案 1</div><h4>节目的引擎</h4><p>12周挑战赛、选手账号、直播、50%投票权重——全部在TikTok上运转。TikTok是节目的运营基础设施。</p></div>
+      <div class="card"><div class="tag">提案 2</div><h4>音源与演唱会</h4><p>THE NINE出道单曲经TikTok全球同步发行；出道元宇宙演唱会通过TikTok LIVE全球直播。</p></div>
+      <div class="card"><div class="tag">提案 3</div><h4>抢占品类</h4><p>成为全球首个拥有"AI偶像选秀 = TikTok"这一等式的平台。可拓展为多季系列IP。</p></div>
+    </div>
+    <div class="callout"><p>"TikTok不是我们的宣传渠道。TikTok本身就是这档节目。"</p></div>
+  </div>
+</section>
+
+<section id="zh-s2">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><path d="M10 2.5 12 7.5 17 9.5 12 11.5 10 16.5 8 11.5 3 9.5 8 7.5Z"/></svg></span><span class="sec-num">02</span><h2 class="display">节目 — MADE 100</h2></div>
+    <p>由全球AI创作者打造、<strong>100%由AI生成的偶像</strong>，共100位进入正赛。历经12周生存竞演，通过50%的评委评分（知名评委团 + 现役虚拟歌手）与50%的全球观众投票，最终9人出道——男子九人全球男团<strong>THE NINE</strong>。</p>
+    <div class="funnel"><span class="stage">1,000+组</span><span class="arrow">→</span><span class="stage">100</span><span class="arrow">→</span><span class="stage">50</span><span class="arrow">→</span><span class="stage">30</span><span class="arrow">→</span><span class="stage">18</span><span class="arrow">→</span><span class="stage">11</span><span class="arrow">→</span><span class="stage gold">THE NINE</span></div>
+    <h3>核心概念——"唯有AI才能做到"的节目</h3>
+    <p>声乐、舞蹈、一对一对决——人类选秀同样具备。〈MADE 100〉的爆点，是让观众惊呼<strong>"AI究竟是怎么做到的？"</strong>的任务——根据观众的关键词在几分钟内完成一首新歌的<strong>即兴创作</strong>，以及AI偶像与粉丝无脚本、即时对话的<strong>实时视频通话</strong>。这些片段短小、震撼——天生就是为在TikTok上引爆而生。</p>
+    <div class="grid grid-3">
+      <div class="card"><h4>三重戏剧张力</h4><p>AI偶像的进化 + 打造它的人类创作者的故事 + 观众的选择。三条情感主线同时展开。</p></div>
+      <div class="card"><h4>零风险出演者</h4><p>从结构上杜绝校园暴力、恋爱、合约纠纷的出演者。24小时活动，多语言同步。</p></div>
+      <div class="card"><h4>零操纵投票</h4><p>基于区块链的投票，并在24小时内公开外部审计报告。可信度即差异化优势。</p></div>
+    </div>
+    <p style="margin-top:var(--s3)"><em>※ 节目完整结构、分集构成与制作细节，详见另附〈MADE 100 节目企划书〉。</em></p>
+  </div>
+</section>
+
+<section id="zh-s3">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><path d="M4 10.5 8.5 15 16 5.5"/></svg></span><span class="sec-num">03</span><h2 class="display">为何〈MADE 100〉与TikTok完美契合</h2></div>
+    <p class="lead">广告赞助通常是单向的——电视台制作内容，平台沦为事后的营销渠道。〈MADE 100〉恰恰相反。这档节目，是为TikTok、以TikTok的语法设计的。</p>
+    <h3>① 与TikTok总部战略100%一致</h3>
+    <p>TikTok一贯推进的方向十分明确——<strong>"从平台走向自有IP，从广告走向运营伙伴，从一次性走向系列化。"</strong>由Branded Hashtag Challenge验证的参与式广告，通过SoundOn切入音乐价值链，借助TikTok LIVE拓展至现场娱乐。〈MADE 100〉<strong>将这三者融合为单一IP</strong>——AI偶像选秀。对TikTok而言，这不是新的冒险，而是已验证模式的下一步。</p>
+    <h3>② TikTok的用户既是选手，也是观众</h3>
+    <p>用AI工具创作内容的创作者，以及消费AI音乐与虚拟偶像的13—29岁全球Z世代——他们早已是TikTok的核心用户。#aimusic、#virtualidol、#aigenerated 是TikTok上增长最快的品类之一。〈MADE 100〉的报名者、观众、挑战赛参与者——<strong>全部与TikTok现有的用户池重叠。</strong>这个IP并非引入新用户，而是以最高效的方式，激活TikTok已经拥有的用户。</p>
+    <h3>③ 全球唯一尚空缺的席位</h3>
+    <p>AI音乐大赛仅限音乐；虚拟偶像背后有真人；公司自有的AI偶像既非公开征集也非选秀。将<strong>AI演唱 + AI视觉 + AI人格 + 出道选拔节目</strong>相结合的形式——全球至今为零。率先定义一个品类者，将永久拥有该品类。"AI偶像选秀"这一关键词，在未来很长一段时间都将在全球搜索中与TikTok之名一同出现。</p>
+    <h3>④ 短小而震撼的片段，连续12周不间断</h3>
+    <p>即兴创作、实时视频通话、AI的前后进化对比、从第9名到第1名的揭晓——〈MADE 100〉<strong>在结构上持续生产可剪成15—60秒、最适合发布到TikTok的片段。</strong>"AI怎么做到的？"的反应，会直接转化为合拍、挑战与分享。内容不是不足，而是过剩。</p>
+    <div class="callout gold"><p>〈MADE 100〉不是一档"发到TikTok上会不错"的节目，而是一档<strong>只有在TikTok上才得以完整</strong>的节目。</p></div>
+  </div>
+</section>
+
+<section id="zh-s4">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="2.5" y="5.5" width="11" height="9" rx="1.5"/><path d="M13.5 8.5 17.5 6v8l-4-2.5Z"/></svg></span><span class="sec-num">04</span><h2 class="display">TikTok即节目本身</h2></div>
+    <p>在〈MADE 100〉中，TikTok不是宣传节目的渠道。<strong>节目本身的运转逻辑，就架构在TikTok之上。</strong></p>
+    <div class="grid grid-2">
+      <div class="card"><h4>每集 = 一项挑战赛</h4><p>观众亲自创作视频参与。挑战赛视频既是内容，也是观众投票的一部分。</p></div>
+      <div class="card"><h4>100位选手 = 100个官方账号</h4><p>一进入正赛，100位AI偶像即开设TikTok官方账号。每周发布幕后与直播内容。</p></div>
+      <div class="card"><h4>每周TikTok LIVE</h4><p>主直播、选手1对1直播、结果发布会全球同步直播。第8集实时粉丝视频通话的舞台。</p></div>
+      <div class="card"><h4>50%投票权重 = TikTok数据</h4><p>点赞、播放、合拍、直播观看时长换算为投票分数。观看，即是投票。</p></div>
+    </div>
+    <div class="callout"><p>没有TikTok，〈MADE 100〉便无法运转。因此TikTok将从赞助商，跃升为<strong>共同运营伙伴</strong>——K-pop新一代形式的共同创作者。</p></div>
+  </div>
+</section>
+
+<section id="zh-s5">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="11" y="3" width="6" height="6" rx="1"/><rect x="3" y="11" width="6" height="6" rx="1"/><rect x="11" y="11" width="6" height="6" rx="1"/></svg></span><span class="sec-num">05</span><h2 class="display">四大合作支柱</h2></div>
+    <p>我们直接沿用TikTok已在运营的资产。几乎无需新建任何内容——其结构只是将已验证的模式叠加到AI偶像品类之上。</p>
+    <div class="axis"><div class="axis-head"><span class="axis-no">01</span><span class="axis-title">Branded Hashtag Challenge — 整季的运营引擎</span></div>
+      <p>主标签<strong>#MADE100</strong>从报名阶段一直运营至出道后。12周内：12个分集挑战 + 6个概念小分队挑战 + 1个出道挑战 = 共19个以上挑战赛资产。完整套餐——关键节点（开季、结果发布会、出道）的TopView首屏曝光、每场挑战的AR特效，以及达人与选手种子视频。</p>
+      <p style="margin-bottom:0"><strong>TikTok曝光：</strong>每一集、每一场挑战均自动呈现"TikTok presents"署名。这不是一次性广告——品牌将与节目一同呼吸整整12周。</p></div>
+    <div class="axis"><div class="axis-head"><span class="axis-no">02</span><span class="axis-title">SoundOn — 全球音源发行</span></div>
+      <p>整季音乐——1首主题曲 + 6首概念小分队歌曲 + THE NINE出道单曲 = 共8首——经<strong>TikTok SoundOn全球同步发行</strong>。出道单曲在收官集的LIVE舞台上首发 → 经SoundOn即时全球分发 → 韩、英、日多语言同步发行。它既是沉淀于SoundOn曲库的音乐资产，也将成为SoundOn平台的重磅榜单进榜案例。</p></div>
+    <div class="axis"><div class="axis-head"><span class="axis-no">03</span><span class="axis-title">TikTok LIVE — 出道舞台的全球直播</span></div>
+      <p>整季的每周主直播、选手1对1直播、结果发布会均在TikTok LIVE进行。收官集——THE NINE出道舞台与元宇宙演唱会——通过<strong>TikTok LIVE全球同步直播</strong>，并运用虚拟座席、数字周边与实时聊天等功能。出道舞台将成为展示TikTok LIVE未来形态的样板。</p></div>
+    <div class="axis"><div class="axis-head"><span class="axis-no">04</span><span class="axis-title">系列合作 — 逐季共同成长</span></div>
+      <p>〈MADE 100〉并非单季节目，而是一个可从第1季（男团THE NINE）→ 第2季（女团方案）→ 延续至以后的<strong>系列IP</strong>。随着季数累积，出道组合、AI偶像与AI主持人将逐步沉淀为资产。TikTok可在见证第1季成果后，将合作延续至下一季——<strong>合作的范围与期限，由双方共同协商确定。</strong></p></div>
+    <div class="callout"><p>具体方案范围与规模，将在与TikTok韩国团队的会议中商定。本提案，是先行展示双方可共同描绘之蓝图的文件。</p></div>
+  </div>
+</section>
+
+<section id="zh-s6">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><circle cx="7" cy="7" r="2.7"/><circle cx="13.5" cy="8" r="2.3"/><path d="M2.5 16c0-3.2 9-3.2 9 0"/><path d="M11.5 15c.4-2.6 7-2.6 6.8.4"/></svg></span><span class="sec-num">06</span><h2 class="display">协同效应 — 各自所得</h2></div>
+    <p class="lead">好的合作，不是一方付费、另一方获得曝光的交易。〈MADE 100〉× TikTok，是双方同时积累资产的结构。</p>
+    <div class="grid grid-2">
+      <div class="card"><div class="tag">TikTok所得</div>
+        <ul class="clean" style="margin-top:var(--s2)">
+          <li><strong>永久拥有一个新品类</strong>——"AI偶像选秀 = TikTok"的等式</li>
+          <li><strong>拓展自有音乐IP</strong>——与SoundOn、LIVE并列的真正IP资产</li>
+          <li><strong>开拓新的广告主品类</strong>——将AI、美妆、时尚、科技品牌对AI偶像合作的需求，吸纳进TikTok For Business</li>
+          <li><strong>全球覆盖 + 用户激活</strong>——100+国家，为TikTok LIVE与SoundOn带来新增流量</li>
+          <li><strong>用户生成内容成为资产</strong>——挑战赛视频沉淀为TikTok内容</li>
+          <li><strong>系列合作</strong>——随季数累积而增长的IP价值（范围与期限另行协商）</li>
+        </ul></div>
+      <div class="card"><div class="tag">〈MADE 100〉所得</div>
+        <ul class="clean" style="margin-top:var(--s2)">
+          <li><strong>从第一天起即面向全球</strong>——电视在韩国，TikTok覆盖100+国家</li>
+          <li><strong>运营基础设施</strong>——挑战赛、账号、直播、投票均在TikTok之上</li>
+          <li><strong>音源全球分发</strong>——经SoundOn同步发行</li>
+          <li><strong>出道即拥有粉丝群</strong>——12周间形成的全球粉丝转化为出道组合的粉丝</li>
+          <li><strong>系列IP资产化</strong>——出道组合与AI主持人成为永久资产</li>
+          <li><strong>公信力</strong>——与全球平台的合作本身即是节目的权威背书</li>
+        </ul></div>
+    </div>
+    <h3>双方共同价值</h3>
+    <div class="grid grid-3">
+      <div class="card"><h4>共同定义品类</h4><p>K-pop进入AI时代的首个合作案例。此后所有进入者，都将在这一等式中竞争。</p></div>
+      <div class="card"><h4>双方同获媒体头条</h4><p>"世界首个AI偶像选秀"——全球媒体报道中，两家之名将一同出现。</p></div>
+      <div class="card"><h4>逐季累积的营收</h4><p>季播、音源、演唱会、授权与广告逐季累积。是一条曲线，而非一次性收益。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="zh-s7">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="13" rx="1.5"/><line x1="3" y1="8" x2="17" y2="8"/><line x1="7" y1="2.5" x2="7" y2="5.5"/><line x1="13" y1="2.5" x2="13" y2="5.5"/></svg></span><span class="sec-num">07</span><h2 class="display">12周运营 — 挑战赛与全球化</h2></div>
+    <h3>12周挑战赛路线图</h3>
+    <p>每集一项挑战赛。从报名阶段直至出道，目标为累计<strong>10万个以上挑战赛视频。</strong></p>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>阶段</th><th>挑战赛</th><th>形式</th></tr></thead>
+      <tbody>
+        <tr><td>报名</td><td>#MADE100</td><td>创作者提交其AI偶像报名视频</td></tr>
+        <tr><td>第1—3集（开篇）</td><td>#FirstSpark · 主题曲合拍 · 1对1对决应援</td><td>为选手应援与模仿</td></tr>
+        <tr><td>第4—7集（竞演）</td><td>位置挑战 · 6个概念小分队挑战</td><td>各小分队新歌挑战</td></tr>
+        <tr><td>第8—10集（危机）</td><td>#ChatWithAI 实时视频通话片段 · 自创曲应援</td><td>捕捉AI互动瞬间</td></tr>
+        <tr><td>第11—12集（出道）</td><td>#TheNineDebut — 出道庆祝与元宇宙演唱会片段</td><td>全球出道挑战</td></tr>
+      </tbody>
+    </table></div>
+    <h3>五种语言全球同步运营</h3>
+    <p>所有内容以韩、英、日、中、西五种语言同步运营。没有时差——多语言字幕在24小时内发布。采用AI翻译 + K-pop专业译者审校的双层结构——从一开始便精准瞄准TikTok最强势的市场：日本、东南亚与拉丁美洲。</p>
+    <h3>100位选手账号 — TikTok的内容工厂</h3>
+    <p>一进入正赛，100位AI偶像即开设TikTok官方账号。12周间，100个账号每周持续产出幕后、直播与挑战内容，目标合计1,000万粉丝。整季结束后，账号所有权移交给创作者本人——100位新创作者将永久留存于TikTok生态。</p>
+    <div class="callout"><p>TikTok越是投入，TikTok自身的资产——内容、账号、用户、数据——便越是增长。这是与普通赞助根本不同的结构。</p></div>
+  </div>
+</section>
+
+<section id="zh-s8">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><polyline points="3,15 8,9.5 12,12.5 17,5"/><polyline points="12.5,5 17,5 17,9.5"/></svg></span><span class="sec-num">08</span><h2 class="display">市场验证 — 无需怀疑的理由</h2></div>
+    <p class="lead">对AI／虚拟偶像市场的质疑已经终结。音源、演唱会、榜单、广告、授权——所有营收领域均已得到验证。</p>
+    <div class="grid grid-3">
+      <div class="card"><div class="kpi">₩45亿</div><div class="kpi-label">PLAVE 2024年营收 · 高尺巨蛋售罄 · 进入Billboard Global 200</div></div>
+      <div class="card"><div class="kpi">¥434亿</div><div class="kpi-label">Hololive FY25营收 · 营业利润率38%</div></div>
+      <div class="card"><div class="kpi">世界首创</div><div class="kpi-label">AI偶像真正出道的选秀</div></div>
+    </div>
+    <h3>TikTok参与即获成功的模式——可直接套用于此</h3>
+    <div class="grid grid-2">
+      <div class="card"><h4>Netflix〈Physical: 100〉</h4><p>一场TikTok挑战赛使其登上80多个国家的榜首。参与式挑战赛是覆盖度的核心引擎——与〈MADE 100〉战略一致。</p></div>
+      <div class="card"><h4>MrBeast〈Beast Games〉</h4><p>TikTok优先的营销策略触达全球5,000万以上观众。是IP运营合作模式，而非一次性赞助——与我们的结构最为接近。</p></div>
+      <div class="card"><h4>Eurovision × TikTok</h4><p>官方合作推动Z世代参与度大幅提升。全球音乐大赛 + TikTok = 经验证的组合。</p></div>
+      <div class="card"><h4>TikTok的音乐发掘IP</h4><p>TikTok亲自运营的全球音乐竞演IP的AI偶像时代版本——总部最易理解的先例。</p></div>
+    </div>
+    <p style="margin-top:var(--s3)">AI音乐在TikTok上早已迅猛增长。AI歌曲进入Billboard榜单，AI翻唱歌曲的互动率数倍高于普通翻唱。<strong>用户池与内容趋势，早已围绕"AI偶像"成形</strong>——〈MADE 100〉将这股潮流汇聚为单一IP。</p>
+  </div>
+</section>
+
+<section id="zh-s9">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.5"/><line x1="2.5" y1="10" x2="17.5" y2="10"/><path d="M10 2.5a11 11 0 0 1 0 15 11 11 0 0 1 0-15Z"/></svg></span><span class="sec-num">09</span><h2 class="display">全球覆盖与预期成果</h2></div>
+    <p>韩国的广告赞助意味着收视集中于韩国。〈MADE 100〉自第1季起即目标<strong>100+国家同步</strong>——这正是TikTok最擅长之事。</p>
+    <h3>第1季目标</h3>
+    <div class="grid grid-4">
+      <div class="card"><div class="kpi">100+</div><div class="kpi-label">覆盖国家</div></div>
+      <div class="card"><div class="kpi">1,000+</div><div class="kpi-label">全球报名组数</div></div>
+      <div class="card"><div class="kpi">10万+</div><div class="kpi-label">挑战赛视频累计</div></div>
+      <div class="card"><div class="kpi">5,000万</div><div class="kpi-label">全球投票累计</div></div>
+      <div class="card"><div class="kpi">1,000万+</div><div class="kpi-label">100位选手合计粉丝</div></div>
+      <div class="card"><div class="kpi">8首</div><div class="kpi-label">经SoundOn发行的音源</div></div>
+      <div class="card"><div class="kpi">10亿+</div><div class="kpi-label">12周累计曝光量</div></div>
+      <div class="card"><div class="kpi">Billboard</div><div class="kpi-label">出道单曲全球榜单进榜——目标</div></div>
+    </div>
+    <h3>精准瞄准TikTok最强势的市场</h3>
+    <p>预计报名者与观众的相当比例将来自<strong>日本、东南亚与拉丁美洲</strong>——皆为TikTok强势市场。在这些地区，〈MADE 100〉将同时实现TikTok用户激活与K-pop内容份额的扩张。</p>
+    <div class="callout gold"><p>〈MADE 100〉是一个媒体头条已获保证的IP——"世界首个AI偶像选秀"。这一合作本身，便为双方创造可观的公关价值。</p></div>
+  </div>
+</section>
+
+<section id="zh-s10">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="2.5" y="4" width="15" height="13" rx="1.5"/><line x1="2.5" y1="8" x2="17.5" y2="8"/><line x1="6.5" y1="2.5" x2="6.5" y2="5.5"/><line x1="13.5" y1="2.5" x2="13.5" y2="5.5"/></svg></span><span class="sec-num">10</span><h2 class="display">时间表与下一步</h2></div>
+    <div class="tbl-wrap"><table>
+      <tbody>
+        <tr><td><strong>合作会议</strong></td><td>提报本提案 · 演示视频 · 核心团队出席</td></tr>
+        <tr><td>合作范围商定</td><td>四大支柱（Branded Hashtag · SoundOn · LIVE · 系列）——整体或分阶段</td></tr>
+        <tr><td>公开征集启动</td><td>2026年夏 — #MADE100挑战赛上线</td></tr>
+        <tr><td>正赛100人公布</td><td>2026年9月 — 100个选手TikTok账号同时开设</td></tr>
+        <tr><td><strong>正式播出（12集）</strong></td><td><strong>2026年10月 – 12月</strong> — 电视与TikTok全球同步</td></tr>
+        <tr><td><strong>THE NINE出道</strong></td><td><strong>2026年12月</strong> — TikTok LIVE全球直播 · SoundOn同步发行</td></tr>
+      </tbody>
+    </table></div>
+    <h3>如何即刻启动</h3>
+    <p>我们提议与TikTok韩国的营销与合作团队举行会议。除本提案外，我们已备妥完整的节目企划书与演示材料。合作范围可由四大支柱整体启动，亦可分阶段推进——可灵活设计，以契合TikTok的决策。</p>
+  </div>
+</section>
+
+<section id="zh-s11">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-icon"><svg viewBox="0 0 20 20"><rect x="4" y="3.5" width="12" height="14" rx="1"/><line x1="7" y1="7" x2="9" y2="7"/><line x1="11" y1="7" x2="13" y2="7"/><line x1="7" y1="10.5" x2="9" y2="10.5"/><line x1="11" y1="10.5" x2="13" y2="10.5"/><line x1="8.5" y1="17.5" x2="8.5" y2="14"/><line x1="11.5" y1="17.5" x2="11.5" y2="14"/></svg></span><span class="sec-num">11</span><h2 class="display">制作公司介绍</h2></div>
+    <div class="grid grid-2">
+      <div class="card"><h4>SUNNY娱乐 (SUNNY Entertainment)</h4><p>一家融合娱乐与尖端技术的<strong>娱乐科技制作公司</strong>。其内容、AI、设计、技术与法务全领域，均由12人专业AI智能体系统运营。〈MADE 100〉的AI偶像制作指南、AI主持人与全球TikTok运营，均以自有团队能力直接完成。</p></div>
+      <div class="card"><h4>STARROAD ENM</h4><p>一家<strong>拥有丰富电视制作经验、并具备广泛全球演出制作经验</strong>的专业制作公司。兼具音乐节目与现场舞台制作的专业能力，是值得信赖的电视制作伙伴。</p></div>
+    </div>
+    <p style="margin-top:var(--s3)"><strong>分工</strong>——SUNNY娱乐：企划、AI制作、AI主持人、全球TikTok运营、设计 / STARROAD ENM：电视节目制作、排播、音乐节目执行。一种将AI娱乐科技企划力与电视制作能力相结合的联合制作体制。</p>
+  </div>
+</section>
+
+<footer>
+  <svg class="hero-bg" viewBox="0 0 1440 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="1440" height="420" fill="url(#heroDots)" /></svg>
+  <div class="wrap" id="zh-s12">
+    <div class="mono">MADE 100 × TikTok &nbsp;/&nbsp; 全球合作提案 &nbsp;/&nbsp; 2026</div>
+    <h2 class="display" style="margin: var(--s3) 0;">AI偶像的时代，就此开启。<br/>而它的第一座舞台，就是<span style="color:var(--tiktok)">TikTok。</span></h2>
+    <p style="color: oklch(78% 0.02 255); max-width: 44em;">这是TikTok已验证的全球音乐IP方法论——在AI偶像时代的延伸。我们提议结成一项战略联盟——共同定义品类，并随季数推进、共同培育这一IP。期待与您携手共创。</p>
+    <div class="pill-row" style="margin-top: var(--s4);">
+      <span class="pill">SUNNY娱乐 × STARROAD ENM</span>
+      <span class="pill">CONTACT — nextsunny@gmail.com</span>
+    </div>
+  </div>
+</footer>
+</div><!-- /ZH -->
+
+<script>
+  (function () {
+    var btns = document.querySelectorAll('.lang-switch button');
+    var titles = { ko: 'MADE 100 × TikTok — 글로벌 파트너십 제안서', en: 'MADE 100 × TikTok — Global Partnership Proposal', zh: 'MADE 100 × TikTok — 全球合作提案' };
+    var htmlLang = { ko: 'ko', en: 'en', zh: 'zh-CN' };
+    function setLang(lang) {
+      document.body.className = 'show-' + lang;
+      document.documentElement.lang = htmlLang[lang] || 'ko';
+      document.title = titles[lang];
+      btns.forEach(function (b) { b.classList.toggle('active', b.dataset.set === lang); });
+      try { localStorage.setItem('made100_tiktok_lang', lang); } catch (e) {}
+    }
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () { setLang(b.dataset.set); window.scrollTo(0, 0); });
+    });
+    try {
+      var saved = localStorage.getItem('made100_tiktok_lang');
+      if (saved === 'ko' || saved === 'en' || saved === 'zh') setLang(saved);
+    } catch (e) {}
+  })();
+</script>
+
+</body>
+</html>
